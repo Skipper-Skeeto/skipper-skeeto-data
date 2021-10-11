@@ -1,0 +1,1814 @@
+{
+  "start_length": 2,
+  "vertices": {
+    "ant_mom": {
+      "tasks": [
+        "ant_mom"
+      ],
+      "items": [],
+      "furthest_room": "mushrooms",
+      "one_time": false
+    },
+    "ant_queen": {
+      "tasks": [
+        "winch",
+        "ant_queen"
+      ],
+      "items": [],
+      "furthest_room": "ant_castle",
+      "one_time": false
+    },
+    "bat": {
+      "tasks": [
+        "light_up_cave",
+        "bat"
+      ],
+      "items": [],
+      "furthest_room": "bat_cave",
+      "one_time": false
+    },
+    "bird_nest_deliver": {
+      "tasks": [
+        "deliver_chick"
+      ],
+      "items": [],
+      "furthest_room": "birds_house",
+      "one_time": false
+    },
+    "bird_nest_talk": {
+      "tasks": [
+        "bird_mother"
+      ],
+      "items": [
+        "yellow_key"
+      ],
+      "furthest_room": "birds_house",
+      "one_time": false
+    },
+    "bridge": {
+      "tasks": [
+        "fish"
+      ],
+      "items": [],
+      "furthest_room": "bridge",
+      "one_time": false
+    },
+    "broom": {
+      "tasks": [],
+      "items": [
+        "broom"
+      ],
+      "furthest_room": "path_bat",
+      "one_time": false
+    },
+    "bucket": {
+      "tasks": [],
+      "items": [
+        "bucket"
+      ],
+      "furthest_room": "path_rose_bush",
+      "one_time": false
+    },
+    "can": {
+      "tasks": [],
+      "items": [
+        "can"
+      ],
+      "furthest_room": "path_bee",
+      "one_time": false
+    },
+    "cat": {
+      "tasks": [
+        "cat"
+      ],
+      "items": [
+        "book"
+      ],
+      "furthest_room": "cat",
+      "one_time": false
+    },
+    "diaper": {
+      "tasks": [],
+      "items": [
+        "diaper"
+      ],
+      "furthest_room": "path_puddle",
+      "one_time": false
+    },
+    "duck": {
+      "tasks": [
+        "duck"
+      ],
+      "items": [
+        "needle"
+      ],
+      "furthest_room": "duck",
+      "one_time": false
+    },
+    "find_chick": {
+      "tasks": [
+        "find_chick"
+      ],
+      "items": [],
+      "furthest_room": "bench",
+      "one_time": false
+    },
+    "fly": {
+      "tasks": [
+        "fly"
+      ],
+      "items": [
+        "green_key"
+      ],
+      "furthest_room": "fly",
+      "one_time": false
+    },
+    "fox_flowers": {
+      "tasks": [
+        "fox"
+      ],
+      "items": [
+        "stick_blue",
+        "flowers"
+      ],
+      "furthest_room": "flower_bush",
+      "one_time": false
+    },
+    "frog": {
+      "tasks": [
+        "frog"
+      ],
+      "items": [],
+      "furthest_room": "frog",
+      "one_time": false
+    },
+    "glasses": {
+      "tasks": [],
+      "items": [
+        "glasses"
+      ],
+      "furthest_room": "rabbit",
+      "one_time": false
+    },
+    "handle": {
+      "tasks": [],
+      "items": [
+        "handle"
+      ],
+      "furthest_room": "bee",
+      "one_time": false
+    },
+    "helmet": {
+      "tasks": [],
+      "items": [
+        "helmet"
+      ],
+      "furthest_room": "squirrel",
+      "one_time": false
+    },
+    "help_bee": {
+      "tasks": [
+        "bee"
+      ],
+      "items": [],
+      "furthest_room": "bee",
+      "one_time": false
+    },
+    "help_elfs": {
+      "tasks": [
+        "elfs"
+      ],
+      "items": [],
+      "furthest_room": "elfs",
+      "one_time": false
+    },
+    "help_owl": {
+      "tasks": [
+        "owl"
+      ],
+      "items": [],
+      "furthest_room": "owl",
+      "one_time": false
+    },
+    "help_rabbit": {
+      "tasks": [
+        "rabbit"
+      ],
+      "items": [],
+      "furthest_room": "rabbit",
+      "one_time": false
+    },
+    "help_squirrel": {
+      "tasks": [
+        "squirrel"
+      ],
+      "items": [],
+      "furthest_room": "squirrel",
+      "one_time": false
+    },
+    "lake_bottom": {
+      "tasks": [
+        "dive"
+      ],
+      "items": [
+        "worm",
+        "horn"
+      ],
+      "furthest_room": "lake_bottom",
+      "one_time": false
+    },
+    "ludo_dice": {
+      "tasks": [],
+      "items": [
+        "ludo_dice"
+      ],
+      "furthest_room": "bat_entry",
+      "one_time": false
+    },
+    "mirror": {
+      "tasks": [],
+      "items": [
+        "mirror"
+      ],
+      "furthest_room": "outside_shed",
+      "one_time": false
+    },
+    "monkey": {
+      "tasks": [
+        "monkey"
+      ],
+      "items": [
+        "stick_yellow"
+      ],
+      "furthest_room": "wall",
+      "one_time": false
+    },
+    "pants": {
+      "tasks": [],
+      "items": [
+        "pants"
+      ],
+      "furthest_room": "snail",
+      "one_time": false
+    },
+    "playground_horse": {
+      "tasks": [],
+      "items": [
+        "sheet"
+      ],
+      "furthest_room": "playground_horse",
+      "one_time": false
+    },
+    "playground_sandbox": {
+      "tasks": [],
+      "items": [
+        "nut",
+        "dummy"
+      ],
+      "furthest_room": "playground_sandbox",
+      "one_time": false
+    },
+    "purple_stick": {
+      "tasks": [],
+      "items": [
+        "stick_purple"
+      ],
+      "furthest_room": "path_elfs",
+      "one_time": false
+    },
+    "radio": {
+      "tasks": [],
+      "items": [
+        "radio"
+      ],
+      "furthest_room": "owl",
+      "one_time": false
+    },
+    "rocket_mouse": {
+      "tasks": [
+        "mouse"
+      ],
+      "items": [],
+      "furthest_room": "rocket",
+      "one_time": true
+    },
+    "rocket_stick": {
+      "tasks": [],
+      "items": [
+        "stick_red"
+      ],
+      "furthest_room": "rocket",
+      "one_time": false
+    },
+    "secret_hideout": {
+      "tasks": [
+        "ladder",
+        "hideout_closet"
+      ],
+      "items": [
+        "fishing_pole"
+      ],
+      "furthest_room": "secret_hideout",
+      "one_time": false
+    },
+    "shed_closets": {
+      "tasks": [
+        "shed_closet"
+      ],
+      "items": [
+        "gas"
+      ],
+      "furthest_room": "shed",
+      "one_time": false
+    },
+    "shed_flashlight": {
+      "tasks": [],
+      "items": [
+        "flashlight"
+      ],
+      "furthest_room": "shed",
+      "one_time": false
+    },
+    "snake": {
+      "tasks": [
+        "snake"
+      ],
+      "items": [
+        "stick_green",
+        "crown"
+      ],
+      "furthest_room": "snake",
+      "one_time": false
+    },
+    "start": {
+      "tasks": [],
+      "items": [
+        "dog",
+        "coin",
+        "letter",
+        "elf_hat"
+      ],
+      "furthest_room": "ladder",
+      "one_time": false
+    },
+    "statue_bottom": {
+      "tasks": [],
+      "items": [
+        "garlic_box",
+        "strawberries"
+      ],
+      "furthest_room": "statue_bottom",
+      "one_time": false
+    },
+    "statue_top": {
+      "tasks": [
+        "statue"
+      ],
+      "items": [],
+      "furthest_room": "statue_head",
+      "one_time": false
+    },
+    "trash": {
+      "tasks": [
+        "trash"
+      ],
+      "items": [
+        "nose"
+      ],
+      "furthest_room": "trashbin",
+      "one_time": false
+    },
+    "tree_trunk_chest": {
+      "tasks": [
+        "snail",
+        "witch",
+        "trunk_top"
+      ],
+      "items": [],
+      "furthest_room": "trunk_top",
+      "one_time": false
+    },
+    "trumpet": {
+      "tasks": [],
+      "items": [
+        "trumpet"
+      ],
+      "furthest_room": "elfs",
+      "one_time": false
+    },
+    "well_top": {
+      "tasks": [
+        "coin_well"
+      ],
+      "items": [
+        "cake",
+        "diving_mask"
+      ],
+      "furthest_room": "well_top",
+      "one_time": false
+    }
+  },
+  "edges": [
+    {
+      "from": "ant_mom",
+      "to": "bridge",
+      "length": 1,
+      "conditions": [
+        "ludo_dice"
+      ],
+      "furthest_room": "bridge"
+    },
+    {
+      "from": "ant_mom",
+      "to": "lake_bottom",
+      "length": 2,
+      "conditions": [
+        "well_top"
+      ],
+      "furthest_room": "lake_bottom"
+    },
+    {
+      "from": "ant_mom",
+      "to": "playground_horse",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "playground_horse"
+    },
+    {
+      "from": "ant_mom",
+      "to": "purple_stick",
+      "length": 2,
+      "conditions": [],
+      "furthest_room": "purple_stick"
+    },
+    {
+      "from": "ant_mom",
+      "to": "radio",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "radio"
+    },
+    {
+      "from": "ant_mom",
+      "to": "start",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "start"
+    },
+    {
+      "from": "ant_queen",
+      "to": "well_top",
+      "length": 1,
+      "conditions": [
+        "playground_horse"
+      ],
+      "furthest_room": "well_top"
+    },
+    {
+      "from": "bat",
+      "to": "ludo_dice",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "ludo_dice"
+    },
+    {
+      "from": "bird_nest_deliver",
+      "to": "bird_nest_talk",
+      "length": 0,
+      "conditions": [],
+      "furthest_room": "bird_nest_talk"
+    },
+    {
+      "from": "bird_nest_talk",
+      "to": "bird_nest_deliver",
+      "length": 0,
+      "conditions": [
+        "find_chick"
+      ],
+      "furthest_room": "bird_nest_deliver"
+    },
+    {
+      "from": "bird_nest_talk",
+      "to": "can",
+      "length": 2,
+      "conditions": [],
+      "furthest_room": "can"
+    },
+    {
+      "from": "bridge",
+      "to": "ant_mom",
+      "length": 1,
+      "conditions": [
+        "playground_sandbox"
+      ],
+      "furthest_room": "ant_mom"
+    },
+    {
+      "from": "bridge",
+      "to": "lake_bottom",
+      "length": 1,
+      "conditions": [
+        "well_top"
+      ],
+      "furthest_room": "lake_bottom"
+    },
+    {
+      "from": "bridge",
+      "to": "playground_horse",
+      "length": 2,
+      "conditions": [],
+      "furthest_room": "playground_horse"
+    },
+    {
+      "from": "bridge",
+      "to": "purple_stick",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "purple_stick"
+    },
+    {
+      "from": "bridge",
+      "to": "radio",
+      "length": 2,
+      "conditions": [],
+      "furthest_room": "radio"
+    },
+    {
+      "from": "bridge",
+      "to": "start",
+      "length": 2,
+      "conditions": [],
+      "furthest_room": "start"
+    },
+    {
+      "from": "broom",
+      "to": "duck",
+      "length": 1,
+      "conditions": [
+        "mirror"
+      ],
+      "furthest_room": "duck"
+    },
+    {
+      "from": "broom",
+      "to": "handle",
+      "length": 2,
+      "conditions": [],
+      "furthest_room": "handle"
+    },
+    {
+      "from": "broom",
+      "to": "ludo_dice",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "ludo_dice"
+    },
+    {
+      "from": "broom",
+      "to": "pants",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "pants"
+    },
+    {
+      "from": "broom",
+      "to": "purple_stick",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "purple_stick"
+    },
+    {
+      "from": "bucket",
+      "to": "diaper",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "diaper"
+    },
+    {
+      "from": "bucket",
+      "to": "glasses",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "glasses"
+    },
+    {
+      "from": "bucket",
+      "to": "help_rabbit",
+      "length": 1,
+      "conditions": [
+        "pants"
+      ],
+      "furthest_room": "help_rabbit"
+    },
+    {
+      "from": "bucket",
+      "to": "mirror",
+      "length": 2,
+      "conditions": [
+        "playground_horse"
+      ],
+      "furthest_room": "mirror"
+    },
+    {
+      "from": "bucket",
+      "to": "radio",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "radio"
+    },
+    {
+      "from": "bucket",
+      "to": "well_top",
+      "length": 2,
+      "conditions": [
+        "playground_horse"
+      ],
+      "furthest_room": "well_top"
+    },
+    {
+      "from": "can",
+      "to": "bird_nest_talk",
+      "length": 2,
+      "conditions": [],
+      "furthest_room": "bird_nest_talk"
+    },
+    {
+      "from": "can",
+      "to": "cat",
+      "length": 3,
+      "conditions": [
+        "start"
+      ],
+      "furthest_room": "cat"
+    },
+    {
+      "from": "can",
+      "to": "find_chick",
+      "length": 1,
+      "conditions": [
+        "bird_nest_talk",
+        "lake_bottom"
+      ],
+      "furthest_room": "find_chick"
+    },
+    {
+      "from": "can",
+      "to": "handle",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "handle"
+    },
+    {
+      "from": "can",
+      "to": "pants",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "pants"
+    },
+    {
+      "from": "can",
+      "to": "rocket_stick",
+      "length": 3,
+      "conditions": [],
+      "furthest_room": "rocket_stick"
+    },
+    {
+      "from": "can",
+      "to": "trash",
+      "length": 2,
+      "conditions": [
+        "diaper"
+      ],
+      "furthest_room": "trash"
+    },
+    {
+      "from": "cat",
+      "to": "can",
+      "length": 3,
+      "conditions": [],
+      "furthest_room": "can"
+    },
+    {
+      "from": "cat",
+      "to": "find_chick",
+      "length": 2,
+      "conditions": [
+        "bird_nest_talk",
+        "lake_bottom"
+      ],
+      "furthest_room": "find_chick"
+    },
+    {
+      "from": "cat",
+      "to": "mirror",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "mirror"
+    },
+    {
+      "from": "cat",
+      "to": "rocket_stick",
+      "length": 2,
+      "conditions": [],
+      "furthest_room": "rocket_stick"
+    },
+    {
+      "from": "cat",
+      "to": "trash",
+      "length": 1,
+      "conditions": [
+        "can",
+        "diaper"
+      ],
+      "furthest_room": "trash"
+    },
+    {
+      "from": "diaper",
+      "to": "bucket",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "bucket"
+    },
+    {
+      "from": "diaper",
+      "to": "frog",
+      "length": 1,
+      "conditions": [
+        "statue_bottom"
+      ],
+      "furthest_room": "frog"
+    },
+    {
+      "from": "diaper",
+      "to": "helmet",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "helmet"
+    },
+    {
+      "from": "diaper",
+      "to": "help_squirrel",
+      "length": 1,
+      "conditions": [
+        "playground_sandbox"
+      ],
+      "furthest_room": "help_squirrel"
+    },
+    {
+      "from": "diaper",
+      "to": "snake",
+      "length": 1,
+      "conditions": [
+        "duck"
+      ],
+      "furthest_room": "snake"
+    },
+    {
+      "from": "duck",
+      "to": "broom",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "broom"
+    },
+    {
+      "from": "duck",
+      "to": "handle",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "handle"
+    },
+    {
+      "from": "find_chick",
+      "to": "can",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "can"
+    },
+    {
+      "from": "find_chick",
+      "to": "cat",
+      "length": 2,
+      "conditions": [
+        "start"
+      ],
+      "furthest_room": "cat"
+    },
+    {
+      "from": "find_chick",
+      "to": "fly",
+      "length": 1,
+      "conditions": [
+        "well_top"
+      ],
+      "furthest_room": "fly"
+    },
+    {
+      "from": "find_chick",
+      "to": "rocket_stick",
+      "length": 2,
+      "conditions": [],
+      "furthest_room": "rocket_stick"
+    },
+    {
+      "from": "find_chick",
+      "to": "trash",
+      "length": 1,
+      "conditions": [
+        "can",
+        "diaper"
+      ],
+      "furthest_room": "trash"
+    },
+    {
+      "from": "fly",
+      "to": "find_chick",
+      "length": 1,
+      "conditions": [
+        "bird_nest_talk",
+        "lake_bottom"
+      ],
+      "furthest_room": "find_chick"
+    },
+    {
+      "from": "fly",
+      "to": "handle",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "handle"
+    },
+    {
+      "from": "fly",
+      "to": "rocket_stick",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "rocket_stick"
+    },
+    {
+      "from": "fly",
+      "to": "start",
+      "length": 2,
+      "conditions": [],
+      "furthest_room": "start"
+    },
+    {
+      "from": "fox_flowers",
+      "to": "playground_sandbox",
+      "length": 2,
+      "conditions": [],
+      "furthest_room": "playground_sandbox"
+    },
+    {
+      "from": "frog",
+      "to": "diaper",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "diaper"
+    },
+    {
+      "from": "frog",
+      "to": "radio",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "radio"
+    },
+    {
+      "from": "glasses",
+      "to": "bucket",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "bucket"
+    },
+    {
+      "from": "glasses",
+      "to": "helmet",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "helmet"
+    },
+    {
+      "from": "glasses",
+      "to": "help_rabbit",
+      "length": 0,
+      "conditions": [
+        "pants"
+      ],
+      "furthest_room": "help_rabbit"
+    },
+    {
+      "from": "glasses",
+      "to": "help_squirrel",
+      "length": 1,
+      "conditions": [
+        "playground_sandbox"
+      ],
+      "furthest_room": "help_squirrel"
+    },
+    {
+      "from": "glasses",
+      "to": "monkey",
+      "length": 1,
+      "conditions": [
+        "radio"
+      ],
+      "furthest_room": "monkey"
+    },
+    {
+      "from": "handle",
+      "to": "broom",
+      "length": 2,
+      "conditions": [],
+      "furthest_room": "broom"
+    },
+    {
+      "from": "handle",
+      "to": "can",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "can"
+    },
+    {
+      "from": "handle",
+      "to": "duck",
+      "length": 1,
+      "conditions": [
+        "mirror"
+      ],
+      "furthest_room": "duck"
+    },
+    {
+      "from": "handle",
+      "to": "fly",
+      "length": 1,
+      "conditions": [
+        "well_top"
+      ],
+      "furthest_room": "fly"
+    },
+    {
+      "from": "handle",
+      "to": "help_bee",
+      "length": 0,
+      "conditions": [
+        "bucket"
+      ],
+      "furthest_room": "help_bee"
+    },
+    {
+      "from": "handle",
+      "to": "start",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "start"
+    },
+    {
+      "from": "helmet",
+      "to": "diaper",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "diaper"
+    },
+    {
+      "from": "helmet",
+      "to": "glasses",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "glasses"
+    },
+    {
+      "from": "helmet",
+      "to": "help_rabbit",
+      "length": 1,
+      "conditions": [
+        "pants"
+      ],
+      "furthest_room": "help_rabbit"
+    },
+    {
+      "from": "helmet",
+      "to": "help_squirrel",
+      "length": 0,
+      "conditions": [
+        "playground_sandbox"
+      ],
+      "furthest_room": "help_squirrel"
+    },
+    {
+      "from": "help_bee",
+      "to": "handle",
+      "length": 0,
+      "conditions": [],
+      "furthest_room": "handle"
+    },
+    {
+      "from": "help_elfs",
+      "to": "trumpet",
+      "length": 0,
+      "conditions": [],
+      "furthest_room": "trumpet"
+    },
+    {
+      "from": "help_owl",
+      "to": "radio",
+      "length": 0,
+      "conditions": [],
+      "furthest_room": "radio"
+    },
+    {
+      "from": "help_rabbit",
+      "to": "bucket",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "bucket"
+    },
+    {
+      "from": "help_rabbit",
+      "to": "glasses",
+      "length": 0,
+      "conditions": [],
+      "furthest_room": "glasses"
+    },
+    {
+      "from": "help_rabbit",
+      "to": "helmet",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "helmet"
+    },
+    {
+      "from": "help_rabbit",
+      "to": "help_squirrel",
+      "length": 1,
+      "conditions": [
+        "playground_sandbox"
+      ],
+      "furthest_room": "help_squirrel"
+    },
+    {
+      "from": "help_rabbit",
+      "to": "monkey",
+      "length": 1,
+      "conditions": [
+        "radio"
+      ],
+      "furthest_room": "monkey"
+    },
+    {
+      "from": "help_squirrel",
+      "to": "diaper",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "diaper"
+    },
+    {
+      "from": "help_squirrel",
+      "to": "glasses",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "glasses"
+    },
+    {
+      "from": "help_squirrel",
+      "to": "helmet",
+      "length": 0,
+      "conditions": [],
+      "furthest_room": "helmet"
+    },
+    {
+      "from": "help_squirrel",
+      "to": "help_rabbit",
+      "length": 1,
+      "conditions": [
+        "pants"
+      ],
+      "furthest_room": "help_rabbit"
+    },
+    {
+      "from": "lake_bottom",
+      "to": "ant_mom",
+      "length": 2,
+      "conditions": [
+        "playground_sandbox"
+      ],
+      "furthest_room": "ant_mom"
+    },
+    {
+      "from": "lake_bottom",
+      "to": "bridge",
+      "length": 1,
+      "conditions": [
+        "ludo_dice"
+      ],
+      "furthest_room": "bridge"
+    },
+    {
+      "from": "lake_bottom",
+      "to": "playground_horse",
+      "length": 3,
+      "conditions": [],
+      "furthest_room": "playground_horse"
+    },
+    {
+      "from": "lake_bottom",
+      "to": "purple_stick",
+      "length": 2,
+      "conditions": [],
+      "furthest_room": "purple_stick"
+    },
+    {
+      "from": "lake_bottom",
+      "to": "radio",
+      "length": 3,
+      "conditions": [],
+      "furthest_room": "radio"
+    },
+    {
+      "from": "lake_bottom",
+      "to": "start",
+      "length": 3,
+      "conditions": [],
+      "furthest_room": "start"
+    },
+    {
+      "from": "ludo_dice",
+      "to": "bat",
+      "length": 1,
+      "conditions": [
+        "shed_flashlight"
+      ],
+      "furthest_room": "bat"
+    },
+    {
+      "from": "ludo_dice",
+      "to": "broom",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "broom"
+    },
+    {
+      "from": "mirror",
+      "to": "bucket",
+      "length": 2,
+      "conditions": [
+        "playground_horse"
+      ],
+      "furthest_room": "bucket"
+    },
+    {
+      "from": "mirror",
+      "to": "cat",
+      "length": 1,
+      "conditions": [
+        "start"
+      ],
+      "furthest_room": "cat"
+    },
+    {
+      "from": "mirror",
+      "to": "monkey",
+      "length": 2,
+      "conditions": [
+        "radio",
+        "playground_horse"
+      ],
+      "furthest_room": "monkey"
+    },
+    {
+      "from": "mirror",
+      "to": "playground_sandbox",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "playground_sandbox"
+    },
+    {
+      "from": "mirror",
+      "to": "shed_flashlight",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "shed_flashlight"
+    },
+    {
+      "from": "mirror",
+      "to": "well_top",
+      "length": 2,
+      "conditions": [
+        "playground_horse"
+      ],
+      "furthest_room": "well_top"
+    },
+    {
+      "from": "monkey",
+      "to": "bucket",
+      "length": 2,
+      "conditions": [
+        "playground_horse"
+      ],
+      "furthest_room": "bucket"
+    },
+    {
+      "from": "monkey",
+      "to": "mirror",
+      "length": 2,
+      "conditions": [
+        "playground_horse"
+      ],
+      "furthest_room": "mirror"
+    },
+    {
+      "from": "monkey",
+      "to": "well_top",
+      "length": 2,
+      "conditions": [
+        "playground_horse"
+      ],
+      "furthest_room": "well_top"
+    },
+    {
+      "from": "pants",
+      "to": "broom",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "broom"
+    },
+    {
+      "from": "pants",
+      "to": "can",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "can"
+    },
+    {
+      "from": "pants",
+      "to": "tree_trunk_chest",
+      "length": 2,
+      "conditions": [
+        "shed_closets",
+        "statue_bottom",
+        "lake_bottom"
+      ],
+      "furthest_room": "tree_trunk_chest"
+    },
+    {
+      "from": "playground_horse",
+      "to": "ant_mom",
+      "length": 1,
+      "conditions": [
+        "playground_sandbox"
+      ],
+      "furthest_room": "ant_mom"
+    },
+    {
+      "from": "playground_horse",
+      "to": "bridge",
+      "length": 2,
+      "conditions": [
+        "ludo_dice"
+      ],
+      "furthest_room": "bridge"
+    },
+    {
+      "from": "playground_horse",
+      "to": "lake_bottom",
+      "length": 3,
+      "conditions": [
+        "well_top"
+      ],
+      "furthest_room": "lake_bottom"
+    },
+    {
+      "from": "playground_horse",
+      "to": "playground_sandbox",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "playground_sandbox"
+    },
+    {
+      "from": "playground_horse",
+      "to": "purple_stick",
+      "length": 3,
+      "conditions": [],
+      "furthest_room": "purple_stick"
+    },
+    {
+      "from": "playground_horse",
+      "to": "radio",
+      "length": 2,
+      "conditions": [],
+      "furthest_room": "radio"
+    },
+    {
+      "from": "playground_horse",
+      "to": "start",
+      "length": 2,
+      "conditions": [],
+      "furthest_room": "start"
+    },
+    {
+      "from": "playground_sandbox",
+      "to": "fox_flowers",
+      "length": 2,
+      "conditions": [
+        "trumpet"
+      ],
+      "furthest_room": "fox_flowers"
+    },
+    {
+      "from": "playground_sandbox",
+      "to": "mirror",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "mirror"
+    },
+    {
+      "from": "playground_sandbox",
+      "to": "playground_horse",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "playground_horse"
+    },
+    {
+      "from": "purple_stick",
+      "to": "ant_mom",
+      "length": 2,
+      "conditions": [
+        "playground_sandbox"
+      ],
+      "furthest_room": "ant_mom"
+    },
+    {
+      "from": "purple_stick",
+      "to": "bridge",
+      "length": 1,
+      "conditions": [
+        "ludo_dice"
+      ],
+      "furthest_room": "bridge"
+    },
+    {
+      "from": "purple_stick",
+      "to": "broom",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "broom"
+    },
+    {
+      "from": "purple_stick",
+      "to": "lake_bottom",
+      "length": 2,
+      "conditions": [
+        "well_top"
+      ],
+      "furthest_room": "lake_bottom"
+    },
+    {
+      "from": "purple_stick",
+      "to": "playground_horse",
+      "length": 3,
+      "conditions": [],
+      "furthest_room": "playground_horse"
+    },
+    {
+      "from": "purple_stick",
+      "to": "radio",
+      "length": 3,
+      "conditions": [],
+      "furthest_room": "radio"
+    },
+    {
+      "from": "purple_stick",
+      "to": "snake",
+      "length": 1,
+      "conditions": [
+        "duck"
+      ],
+      "furthest_room": "snake"
+    },
+    {
+      "from": "purple_stick",
+      "to": "start",
+      "length": 3,
+      "conditions": [],
+      "furthest_room": "start"
+    },
+    {
+      "from": "purple_stick",
+      "to": "trumpet",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "trumpet"
+    },
+    {
+      "from": "radio",
+      "to": "ant_mom",
+      "length": 1,
+      "conditions": [
+        "playground_sandbox"
+      ],
+      "furthest_room": "ant_mom"
+    },
+    {
+      "from": "radio",
+      "to": "bridge",
+      "length": 2,
+      "conditions": [
+        "ludo_dice"
+      ],
+      "furthest_room": "bridge"
+    },
+    {
+      "from": "radio",
+      "to": "bucket",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "bucket"
+    },
+    {
+      "from": "radio",
+      "to": "frog",
+      "length": 1,
+      "conditions": [
+        "statue_bottom"
+      ],
+      "furthest_room": "frog"
+    },
+    {
+      "from": "radio",
+      "to": "help_owl",
+      "length": 0,
+      "conditions": [
+        "cat",
+        "glasses"
+      ],
+      "furthest_room": "help_owl"
+    },
+    {
+      "from": "radio",
+      "to": "lake_bottom",
+      "length": 3,
+      "conditions": [
+        "well_top"
+      ],
+      "furthest_room": "lake_bottom"
+    },
+    {
+      "from": "radio",
+      "to": "playground_horse",
+      "length": 2,
+      "conditions": [],
+      "furthest_room": "playground_horse"
+    },
+    {
+      "from": "radio",
+      "to": "purple_stick",
+      "length": 3,
+      "conditions": [],
+      "furthest_room": "purple_stick"
+    },
+    {
+      "from": "radio",
+      "to": "start",
+      "length": 2,
+      "conditions": [],
+      "furthest_room": "start"
+    },
+    {
+      "from": "rocket_mouse",
+      "to": "can",
+      "length": 3,
+      "conditions": [],
+      "furthest_room": "can"
+    },
+    {
+      "from": "rocket_mouse",
+      "to": "cat",
+      "length": 2,
+      "conditions": [
+        "start"
+      ],
+      "furthest_room": "cat"
+    },
+    {
+      "from": "rocket_mouse",
+      "to": "find_chick",
+      "length": 2,
+      "conditions": [
+        "bird_nest_talk",
+        "lake_bottom"
+      ],
+      "furthest_room": "find_chick"
+    },
+    {
+      "from": "rocket_mouse",
+      "to": "rocket_stick",
+      "length": 2,
+      "conditions": [],
+      "furthest_room": "rocket_stick"
+    },
+    {
+      "from": "rocket_mouse",
+      "to": "trash",
+      "length": 1,
+      "conditions": [
+        "can",
+        "diaper"
+      ],
+      "furthest_room": "trash"
+    },
+    {
+      "from": "rocket_stick",
+      "to": "can",
+      "length": 3,
+      "conditions": [],
+      "furthest_room": "can"
+    },
+    {
+      "from": "rocket_stick",
+      "to": "cat",
+      "length": 2,
+      "conditions": [
+        "start"
+      ],
+      "furthest_room": "cat"
+    },
+    {
+      "from": "rocket_stick",
+      "to": "find_chick",
+      "length": 2,
+      "conditions": [
+        "bird_nest_talk",
+        "lake_bottom"
+      ],
+      "furthest_room": "find_chick"
+    },
+    {
+      "from": "rocket_stick",
+      "to": "fly",
+      "length": 1,
+      "conditions": [
+        "well_top"
+      ],
+      "furthest_room": "fly"
+    },
+    {
+      "from": "rocket_stick",
+      "to": "rocket_mouse",
+      "length": 0,
+      "conditions": [
+        "broom",
+        "helmet"
+      ],
+      "furthest_room": "rocket_mouse"
+    },
+    {
+      "from": "rocket_stick",
+      "to": "trash",
+      "length": 1,
+      "conditions": [
+        "can",
+        "diaper"
+      ],
+      "furthest_room": "trash"
+    },
+    {
+      "from": "secret_hideout",
+      "to": "start",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "start"
+    },
+    {
+      "from": "shed_closets",
+      "to": "shed_flashlight",
+      "length": 0,
+      "conditions": [],
+      "furthest_room": "shed_flashlight"
+    },
+    {
+      "from": "shed_flashlight",
+      "to": "mirror",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "mirror"
+    },
+    {
+      "from": "shed_flashlight",
+      "to": "shed_closets",
+      "length": 0,
+      "conditions": [
+        "bird_nest_talk"
+      ],
+      "furthest_room": "shed_closets"
+    },
+    {
+      "from": "snake",
+      "to": "diaper",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "diaper"
+    },
+    {
+      "from": "snake",
+      "to": "purple_stick",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "purple_stick"
+    },
+    {
+      "from": "snake",
+      "to": "statue_bottom",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "statue_bottom"
+    },
+    {
+      "from": "start",
+      "to": "ant_mom",
+      "length": 1,
+      "conditions": [
+        "playground_sandbox"
+      ],
+      "furthest_room": "ant_mom"
+    },
+    {
+      "from": "start",
+      "to": "bridge",
+      "length": 2,
+      "conditions": [
+        "ludo_dice"
+      ],
+      "furthest_room": "bridge"
+    },
+    {
+      "from": "start",
+      "to": "fly",
+      "length": 2,
+      "conditions": [
+        "well_top"
+      ],
+      "furthest_room": "fly"
+    },
+    {
+      "from": "start",
+      "to": "handle",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "handle"
+    },
+    {
+      "from": "start",
+      "to": "lake_bottom",
+      "length": 3,
+      "conditions": [
+        "well_top"
+      ],
+      "furthest_room": "lake_bottom"
+    },
+    {
+      "from": "start",
+      "to": "playground_horse",
+      "length": 2,
+      "conditions": [],
+      "furthest_room": "playground_horse"
+    },
+    {
+      "from": "start",
+      "to": "purple_stick",
+      "length": 3,
+      "conditions": [],
+      "furthest_room": "purple_stick"
+    },
+    {
+      "from": "start",
+      "to": "radio",
+      "length": 2,
+      "conditions": [],
+      "furthest_room": "radio"
+    },
+    {
+      "from": "start",
+      "to": "secret_hideout",
+      "length": 1,
+      "conditions": [
+        "fox_flowers",
+        "fly",
+        "rocket_stick",
+        "snake",
+        "monkey",
+        "purple_stick"
+      ],
+      "furthest_room": "secret_hideout"
+    },
+    {
+      "from": "statue_bottom",
+      "to": "snake",
+      "length": 1,
+      "conditions": [
+        "duck"
+      ],
+      "furthest_room": "snake"
+    },
+    {
+      "from": "statue_bottom",
+      "to": "statue_top",
+      "length": 1,
+      "conditions": [
+        "trash"
+      ],
+      "furthest_room": "statue_top"
+    },
+    {
+      "from": "statue_top",
+      "to": "statue_bottom",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "statue_bottom"
+    },
+    {
+      "from": "trash",
+      "to": "can",
+      "length": 2,
+      "conditions": [],
+      "furthest_room": "can"
+    },
+    {
+      "from": "trash",
+      "to": "cat",
+      "length": 1,
+      "conditions": [
+        "start"
+      ],
+      "furthest_room": "cat"
+    },
+    {
+      "from": "trash",
+      "to": "find_chick",
+      "length": 1,
+      "conditions": [
+        "bird_nest_talk",
+        "lake_bottom"
+      ],
+      "furthest_room": "find_chick"
+    },
+    {
+      "from": "trash",
+      "to": "rocket_stick",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "rocket_stick"
+    },
+    {
+      "from": "tree_trunk_chest",
+      "to": "pants",
+      "length": 2,
+      "conditions": [],
+      "furthest_room": "pants"
+    },
+    {
+      "from": "trumpet",
+      "to": "help_elfs",
+      "length": 0,
+      "conditions": [
+        "fox_flowers"
+      ],
+      "furthest_room": "help_elfs"
+    },
+    {
+      "from": "trumpet",
+      "to": "purple_stick",
+      "length": 1,
+      "conditions": [],
+      "furthest_room": "purple_stick"
+    },
+    {
+      "from": "well_top",
+      "to": "ant_queen",
+      "length": 1,
+      "conditions": [
+        "snake"
+      ],
+      "furthest_room": "ant_queen"
+    },
+    {
+      "from": "well_top",
+      "to": "bucket",
+      "length": 2,
+      "conditions": [],
+      "furthest_room": "bucket"
+    },
+    {
+      "from": "well_top",
+      "to": "mirror",
+      "length": 2,
+      "conditions": [],
+      "furthest_room": "mirror"
+    },
+    {
+      "from": "well_top",
+      "to": "monkey",
+      "length": 2,
+      "conditions": [
+        "radio"
+      ],
+      "furthest_room": "monkey"
+    }
+  ]
+}
