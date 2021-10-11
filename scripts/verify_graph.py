@@ -1,5 +1,7 @@
+import argparse
 import json
 import os
+import sys
 
 graph_path = "graph"
 raw_path = "raw"
@@ -26,7 +28,7 @@ class Conditions:
                 
         
 
-def check_edge_lengths(graph_data, raw_data):
+def check_edge_lengths(graph_data, raw_data, warning_prefix):
     all_good = True
 
     edges = graph_data["edges"]
@@ -78,7 +80,7 @@ def check_edge_lengths(graph_data, raw_data):
 
         if expected_length != actual_length:
             all_good = False
-            print(" - Exptected length for edge from vertex", edge["from"], "(room \"" + str(from_room) + "\") to vertex", edge["to"], "(room \"" + str(to_room) + "\")",
+            print(warning_prefix + "Exptected length for edge from vertex", edge["from"], "(room \"" + str(from_room) + "\") to vertex", edge["to"], "(room \"" + str(to_room) + "\")",
                   "to be", expected_length, "but actual length is calculated to be", actual_length)
 
     return all_good
@@ -124,6 +126,14 @@ def fetch_graph_ids():
 
     return graph_ids
 
+parser = argparse.ArgumentParser(description='Verify graph data up against raw data')
+parser.add_argument('--warning-prefix', dest='warning_prefix', default=" - ",
+                    help='Prefix printed before warning messages')
+
+args = parser.parse_args()
+warning_prefix = args.warning_prefix
+
+exit_code = 0
 for game_version in fetch_graph_ids():
     print("Check edge lenghts for game version " + game_version + ":")
     with open(os.path.join(graph_path, "ss_" + game_version + "_graph.json")) as graph_file:
@@ -132,5 +142,9 @@ for game_version in fetch_graph_ids():
     with open(os.path.join(raw_path, "ss_" + game_version + "_raw.json")) as graph_file:
         raw_data = json.load(graph_file)
 
-    if check_edge_lengths(graph_data, raw_data):
+    if check_edge_lengths(graph_data, raw_data, warning_prefix):
         print(" - OK")
+    else:
+        exit_code = 1
+
+sys.exit(exit_code)
