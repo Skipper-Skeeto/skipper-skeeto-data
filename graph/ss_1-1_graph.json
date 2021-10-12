@@ -1,5 +1,6 @@
 {
   "start_length": 1,
+  "start_vertex": "start",
   "vertices": {
     "ant_mom": {
       "tasks": [
