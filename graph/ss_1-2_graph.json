@@ -956,6 +956,13 @@
     },
     {
       "from": "handle",
+      "to": "purple_stick",
+      "length": 3,
+      "conditions": [],
+      "furthest_room": "purple_stick"
+    },
+    {
+      "from": "handle",
       "to": "start",
       "length": 1,
       "conditions": [],
@@ -1350,6 +1357,13 @@
       "length": 1,
       "conditions": [],
       "furthest_room": "broom"
+    },
+    {
+      "from": "purple_stick",
+      "to": "handle",
+      "length": 3,
+      "conditions": [],
+      "furthest_room": "handle"
     },
     {
       "from": "purple_stick",
