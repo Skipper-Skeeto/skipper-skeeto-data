@@ -1,0 +1,11 @@
+name: Verify Skipper and Skeeto Data
+on: [push]
+jobs:
+  Verify-Data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+      - name: Verify graph data
+        run: 'python scripts/verify_graph.py --warning-prefix="::warning::"'
+        

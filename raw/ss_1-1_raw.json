@@ -1,0 +1,745 @@
+{
+  "start_room": "home",
+  "items": {
+    "book": {
+      "description": "Book",
+      "room": "cat",
+      "task_obstacle": null
+    },
+    "broom": {
+      "description": "Broom",
+      "room": "path_bat",
+      "task_obstacle": null
+    },
+    "bucket": {
+      "description": "Bucket",
+      "room": "path_rose_bush",
+      "task_obstacle": null
+    },
+    "can": {
+      "description": "Can",
+      "room": "path_bee",
+      "task_obstacle": null
+    },
+    "crown": {
+      "description": "Crown",
+      "room": "snake",
+      "task_obstacle": null
+    },
+    "diaper": {
+      "description": "Diaper",
+      "room": "path_puddle",
+      "task_obstacle": null
+    },
+    "dog": {
+      "description": "Dog",
+      "room": "home",
+      "task_obstacle": null
+    },
+    "dummy": {
+      "description": "Dummy",
+      "room": "playground_sandbox",
+      "task_obstacle": null
+    },
+    "elf_hat": {
+      "description": "Elf hat",
+      "room": "ladder",
+      "task_obstacle": null
+    },
+    "flashlight": {
+      "description": "Flashlight",
+      "room": "shed",
+      "task_obstacle": null
+    },
+    "flowers": {
+      "description": "Flowers",
+      "room": "flower_bush",
+      "task_obstacle": null
+    },
+    "glasses": {
+      "description": "Glasses",
+      "room": "rabbit",
+      "task_obstacle": null
+    },
+    "helmet": {
+      "description": "Helmet",
+      "room": "squirrel",
+      "task_obstacle": null
+    },
+    "horn": {
+      "description": "Horn",
+      "room": "lake_bottom",
+      "task_obstacle": null
+    },
+    "letter": {
+      "description": "Letter",
+      "room": "outside_home",
+      "task_obstacle": null
+    },
+    "lightning": {
+      "description": "Lightning",
+      "room": "statue_bottom",
+      "task_obstacle": null
+    },
+    "ludo_cube": {
+      "description": "Ludo cube",
+      "room": "bat_entry",
+      "task_obstacle": null
+    },
+    "mirror": {
+      "description": "Mirror",
+      "room": "outside_shed",
+      "task_obstacle": null
+    },
+    "motorsaw": {
+      "description": "Motorsaw",
+      "room": "shed",
+      "task_obstacle": "shed_closet"
+    },
+    "needle": {
+      "description": "Needle",
+      "room": "duck",
+      "task_obstacle": "duck"
+    },
+    "nose": {
+      "description": "Nose",
+      "room": "trashbin",
+      "task_obstacle": "trash"
+    },
+    "nut": {
+      "description": "Nut",
+      "room": "playground_sandbox",
+      "task_obstacle": null
+    },
+    "pants": {
+      "description": "Pants",
+      "room": "snail",
+      "task_obstacle": null
+    },
+    "sheet": {
+      "description": "Sheet",
+      "room": "playground_horse",
+      "task_obstacle": null
+    },
+    "strawberries": {
+      "description": "Strawberries",
+      "room": "statue_bottom",
+      "task_obstacle": null
+    },
+    "trumpet": {
+      "description": "Trumpet",
+      "room": "elfs",
+      "task_obstacle": null
+    },
+    "worm": {
+      "description": "Worm",
+      "room": "lake_bottom",
+      "task_obstacle": null
+    },
+    "yellow_key": {
+      "description": "Yellow key",
+      "room": "birds_house",
+      "task_obstacle": null
+    }
+  },
+  "tasks": {
+    "ant_mom": {
+      "description": "Help ant mom",
+      "room": "mushrooms",
+      "task_obstacle": null,
+      "items_needed": [
+        "dummy"
+      ],
+      "post_room": null
+    },
+    "ant_queen": {
+      "description": "Help ant queen",
+      "room": "ant_castle",
+      "task_obstacle": null,
+      "items_needed": [
+        "crown"
+      ],
+      "post_room": null
+    },
+    "bat": {
+      "description": "Help bat",
+      "room": "bat_cave",
+      "task_obstacle": null,
+      "items_needed": [
+        "letter"
+      ],
+      "post_room": null
+    },
+    "bee": {
+      "description": "Help bee",
+      "room": "bee",
+      "task_obstacle": null,
+      "items_needed": [
+        "bucket"
+      ],
+      "post_room": null
+    },
+    "bird_mother": {
+      "description": "Talk with birds mother",
+      "room": "birds_house",
+      "task_obstacle": null,
+      "items_needed": null,
+      "post_room": null
+    },
+    "cat": {
+      "description": "Scare cat",
+      "room": "cat",
+      "task_obstacle": null,
+      "items_needed": [
+        "dog"
+      ],
+      "post_room": null
+    },
+    "deliver_chick": {
+      "description": "Deliver chick",
+      "room": "birds_house",
+      "task_obstacle": "find_chick",
+      "items_needed": null,
+      "post_room": null
+    },
+    "duck": {
+      "description": "Help duck",
+      "room": "duck",
+      "task_obstacle": null,
+      "items_needed": [
+        "mirror"
+      ],
+      "post_room": null
+    },
+    "elfs": {
+      "description": "Help elfs",
+      "room": "elfs",
+      "task_obstacle": null,
+      "items_needed": [
+        "elf_hat",
+        "flowers"
+      ],
+      "post_room": null
+    },
+    "find_chick": {
+      "description": "Find chick",
+      "room": "bench",
+      "task_obstacle": "bird_mother",
+      "items_needed": [
+        "worm"
+      ],
+      "post_room": null
+    },
+    "fish": {
+      "description": "Help fish",
+      "room": "bridge",
+      "task_obstacle": null,
+      "items_needed": [
+        "ludo_cube"
+      ],
+      "post_room": null
+    },
+    "fox": {
+      "description": "Scare fox",
+      "room": "fox",
+      "task_obstacle": null,
+      "items_needed": [
+        "trumpet"
+      ],
+      "post_room": null
+    },
+    "frog": {
+      "description": "Help frog",
+      "room": "frog",
+      "task_obstacle": null,
+      "items_needed": [
+        "strawberries"
+      ],
+      "post_room": null
+    },
+    "light_up_cave": {
+      "description": "Light up cave",
+      "room": "bat_cave",
+      "task_obstacle": null,
+      "items_needed": [
+        "flashlight"
+      ],
+      "post_room": null
+    },
+    "mouse": {
+      "description": "Help rocket mouse",
+      "room": "rocket",
+      "task_obstacle": null,
+      "items_needed": [
+        "helmet",
+        "broom"
+      ],
+      "post_room": "trashbin"
+    },
+    "owl": {
+      "description": "Help owl",
+      "room": "owl",
+      "task_obstacle": null,
+      "items_needed": [
+        "glasses",
+        "book"
+      ],
+      "post_room": null
+    },
+    "rabbit": {
+      "description": "Help rabbit",
+      "room": "rabbit",
+      "task_obstacle": null,
+      "items_needed": [
+        "pants"
+      ],
+      "post_room": null
+    },
+    "rat": {
+      "description": "Scare rat",
+      "room": "rat",
+      "task_obstacle": null,
+      "items_needed": [
+        "sheet"
+      ],
+      "post_room": null
+    },
+    "shed_closet": {
+      "description": "Unlock left closet",
+      "room": "shed",
+      "task_obstacle": null,
+      "items_needed": [
+        "yellow_key"
+      ],
+      "post_room": null
+    },
+    "snail": {
+      "description": "Help snail",
+      "room": "snail",
+      "task_obstacle": null,
+      "items_needed": [
+        "horn"
+      ],
+      "post_room": null
+    },
+    "snake": {
+      "description": "Let down snake",
+      "room": "snake",
+      "task_obstacle": null,
+      "items_needed": [
+        "needle"
+      ],
+      "post_room": null
+    },
+    "squirrel": {
+      "description": "Help squirrel",
+      "room": "squirrel",
+      "task_obstacle": null,
+      "items_needed": [
+        "nut"
+      ],
+      "post_room": null
+    },
+    "statue": {
+      "description": "Fix statue",
+      "room": "statue_head",
+      "task_obstacle": null,
+      "items_needed": [
+        "nose"
+      ],
+      "post_room": null
+    },
+    "trash": {
+      "description": "Throw away trash",
+      "room": "trashbin",
+      "task_obstacle": null,
+      "items_needed": [
+        "diaper",
+        "can"
+      ],
+      "post_room": null
+    },
+    "trunk_top": {
+      "description": "Visit tree trunk top",
+      "room": "trunk_top",
+      "task_obstacle": null,
+      "items_needed": null,
+      "post_room": null
+    },
+    "witch": {
+      "description": "Remove witch",
+      "room": "trunk_bottom",
+      "task_obstacle": null,
+      "items_needed": [
+        "lightning",
+        "motorsaw"
+      ],
+      "post_room": null
+    }
+  },
+  "rooms": {
+    "ant_castle": {
+      "description": "Ant castle",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "well_top"
+      ]
+    },
+    "bat_cave": {
+      "description": "Bat cave",
+      "task_obstacle": "light_up_cave",
+      "connected_rooms": [
+        "bat_entry"
+      ]
+    },
+    "bat_entry": {
+      "description": "Bat entry",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "path_bat",
+        "bat_cave"
+      ]
+    },
+    "bee": {
+      "description": "Bee home",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "fly",
+        "duck",
+        "ladder",
+        "path_bee"
+      ]
+    },
+    "bench": {
+      "description": "Bench",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "trashbin",
+        "path_bee",
+        "fly"
+      ]
+    },
+    "birds_house": {
+      "description": "Birds house",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "tree_bottom"
+      ]
+    },
+    "bridge": {
+      "description": "Bridge",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "mushrooms",
+        "path_elfs",
+        "lake_bottom"
+      ]
+    },
+    "cat": {
+      "description": "Cat corner",
+      "task_obstacle": "cat",
+      "connected_rooms": [
+        "trashbin",
+        "outside_shed"
+      ]
+    },
+    "duck": {
+      "description": "Duck",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "bee",
+        "path_bat"
+      ]
+    },
+    "elfs": {
+      "description": "Elf house",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "path_elfs"
+      ]
+    },
+    "flower_bush": {
+      "description": "Flower bush",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "fox"
+      ]
+    },
+    "fly": {
+      "description": "Fly",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "rocket",
+        "bee",
+        "outside_home",
+        "bench"
+      ]
+    },
+    "fox": {
+      "description": "Fox bush",
+      "task_obstacle": "fox",
+      "connected_rooms": [
+        "flower_bush",
+        "playground_sandbox"
+      ]
+    },
+    "frog": {
+      "description": "Frog",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "owl",
+        "path_puddle"
+      ]
+    },
+    "home": {
+      "description": "Home",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "outside_home"
+      ]
+    },
+    "ladder": {
+      "description": "Ladder",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "outside_home",
+        "mushrooms",
+        "bee"
+      ]
+    },
+    "lake_bottom": {
+      "description": "Lake bottom",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "bridge"
+      ]
+    },
+    "mushrooms": {
+      "description": "Mushroom houses",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "playground_horse",
+        "bridge",
+        "owl",
+        "ladder"
+      ]
+    },
+    "outside_home": {
+      "description": "Outside home",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "home",
+        "ladder",
+        "fly"
+      ]
+    },
+    "outside_shed": {
+      "description": "Outside shed",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "shed",
+        "playground_sandbox",
+        "rat",
+        "cat"
+      ]
+    },
+    "owl": {
+      "description": "Owl house",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "frog",
+        "path_rose_bush",
+        "mushrooms"
+      ]
+    },
+    "path_bat": {
+      "description": "Path bat",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "duck",
+        "bat_entry",
+        "path_elfs",
+        "snail"
+      ]
+    },
+    "path_bee": {
+      "description": "Path bee",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "bench",
+        "snail",
+        "bee",
+        "tree_bottom"
+      ]
+    },
+    "path_elfs": {
+      "description": "Path elf house",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "bridge",
+        "elfs",
+        "snake",
+        "path_bat"
+      ]
+    },
+    "path_puddle": {
+      "description": "Path puddle",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "path_rose_bush",
+        "snake",
+        "squirrel",
+        "frog"
+      ]
+    },
+    "path_rose_bush": {
+      "description": "Path rose bush",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "rat",
+        "path_puddle",
+        "rabbit",
+        "owl"
+      ]
+    },
+    "playground_horse": {
+      "description": "Playground horse",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "playground_sandbox",
+        "mushrooms"
+      ]
+    },
+    "playground_sandbox": {
+      "description": "Playground sandbox",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "outside_shed",
+        "playground_horse",
+        "fox"
+      ]
+    },
+    "rabbit": {
+      "description": "Rabbit house",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "wall",
+        "squirrel",
+        "path_rose_bush"
+      ]
+    },
+    "rat": {
+      "description": "Rat corner",
+      "task_obstacle": "rat",
+      "connected_rooms": [
+        "well_top",
+        "path_rose_bush",
+        "wall",
+        "outside_shed"
+      ]
+    },
+    "rocket": {
+      "description": "Rocket",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "fly",
+        "trashbin"
+      ]
+    },
+    "shed": {
+      "description": "Shed",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "outside_shed"
+      ]
+    },
+    "snail": {
+      "description": "Snail corner",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "path_bee",
+        "trunk_bottom",
+        "path_bat"
+      ]
+    },
+    "snake": {
+      "description": "Snake corner",
+      "task_obstacle": "snake",
+      "connected_rooms": [
+        "path_puddle",
+        "statue_bottom",
+        "path_elfs"
+      ]
+    },
+    "squirrel": {
+      "description": "Squirrel house",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "rabbit",
+        "path_puddle"
+      ]
+    },
+    "statue_bottom": {
+      "description": "Statue bottom",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "statue_head",
+        "snake"
+      ]
+    },
+    "statue_head": {
+      "description": "Statue head",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "statue_bottom"
+      ]
+    },
+    "trashbin": {
+      "description": "Trashbin",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "cat",
+        "bench",
+        "rocket"
+      ]
+    },
+    "tree_bottom": {
+      "description": "Tree bottom",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "path_bee",
+        "birds_house"
+      ]
+    },
+    "trunk_bottom": {
+      "description": "Tree trunk bottom",
+      "task_obstacle": "witch",
+      "connected_rooms": [
+        "snail",
+        "trunk_top"
+      ]
+    },
+    "trunk_top": {
+      "description": "Tree trunk top",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "trunk_bottom"
+      ]
+    },
+    "wall": {
+      "description": "Wall",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "rat"
+      ]
+    },
+    "well_top": {
+      "description": "Well top",
+      "task_obstacle": null,
+      "connected_rooms": [
+        "ant_castle",
+        "rat"
+      ]
+    }
+  }
+}
