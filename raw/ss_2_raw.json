@@ -1,202 +1,202 @@
 {
-  "start_room": "main_hall",
+  "start_scene": "main_hall",
   "items": {
     "battery": {
-      "room": "tower_2",
+      "scene": "tower_2",
       "task_obstacle": null
     },
     "bedroom_key_1": {
-      "room": "dining_room",
+      "scene": "dining_room",
       "task_obstacle": "Plant flower"
     },
     "bedroom_key_2": {
-      "room": "first_floor",
+      "scene": "first_floor",
       "task_obstacle": null
     },
     "blue_book": {
-      "room": "guest_room",
+      "scene": "guest_room",
       "task_obstacle": null
     },
     "bottle_1": {
-      "room": "dining_room_table",
+      "scene": "dining_room_table",
       "task_obstacle": null
     },
     "bottle_2": {
-      "room": "fake_treasure_room",
+      "scene": "fake_treasure_room",
       "task_obstacle": null
     },
     "bottle_3": {
-      "room": "hunting_room",
+      "scene": "hunting_room",
       "task_obstacle": null
     },
     "bugle": {
-      "room": "lumber_room",
+      "scene": "lumber_room",
       "task_obstacle": null
     },
     "dentures": {
-      "room": "dining_room_table",
+      "scene": "dining_room_table",
       "task_obstacle": null
     },
     "dining_room_key": {
-      "room": "counts_room",
+      "scene": "counts_room",
       "task_obstacle": null
     },
     "doll_body": {
-      "room": "girls_room",
+      "scene": "girls_room",
       "task_obstacle": null
     },
     "doll_head": {
-      "room": "wine_cellar",
+      "scene": "wine_cellar",
       "task_obstacle": null
     },
     "hammer_handle": {
-      "room": "guest_room",
+      "scene": "guest_room",
       "task_obstacle": null
     },
     "hammer_head": {
-      "room": "tower_1",
+      "scene": "tower_1",
       "task_obstacle": null
     },
     "ladder_key": {
-      "room": "observatory",
+      "scene": "observatory",
       "task_obstacle": null
     },
     "lever": {
-      "room": "counts_room",
+      "scene": "counts_room",
       "task_obstacle": null
     },
     "matchbox": {
-      "room": "main_hall",
+      "scene": "main_hall",
       "task_obstacle": null
     },
     "medallion": {
-      "room": "main_hall",
+      "scene": "main_hall",
       "task_obstacle": null
     },
     "needle": {
-      "room": "bedroom",
+      "scene": "bedroom",
       "task_obstacle": null
     },
     "nitro": {
-      "room": "laboratory",
+      "scene": "laboratory",
       "task_obstacle": "Produce nitro"
     },
     "penny": {
-      "room": "mouse_door",
+      "scene": "mouse_door",
       "task_obstacle": "Hand over dentures"
     },
     "rabbit": {
-      "room": "mouse_door",
+      "scene": "mouse_door",
       "task_obstacle": null
     },
     "rubber_band": {
-      "room": "observatory",
+      "scene": "observatory",
       "task_obstacle": null
     },
     "slingshot_handle": {
-      "room": "counts_room",
+      "scene": "counts_room",
       "task_obstacle": null
     },
     "spoon": {
-      "room": "kitchen",
+      "scene": "kitchen",
       "task_obstacle": null
     },
     "spring": {
-      "room": "clockworks",
+      "scene": "clockworks",
       "task_obstacle": null
     },
     "tall_flower": {
-      "room": "greenhouse",
+      "scene": "greenhouse",
       "task_obstacle": null
     },
     "tower_key": {
-      "room": "library",
+      "scene": "library",
       "task_obstacle": null
     },
     "wick": {
-      "room": "kitchen",
+      "scene": "kitchen",
       "task_obstacle": null
     }
   },
   "tasks": {
     "Remove green ghost": {
-      "room": "crypt",
+      "scene": "crypt",
       "task_obstacle": "Light up crypt",
       "items_needed": [
         "penny"
       ],
-      "post_room": null
+      "post_scene": null
     },
     "Remove dining ghost": {
-      "room": "crypt",
+      "scene": "crypt",
       "task_obstacle": "Light up crypt",
       "items_needed": [
         "spoon"
       ],
-      "post_room": null
+      "post_scene": null
     },
     "Remove girl ghost": {
-      "room": "crypt",
+      "scene": "crypt",
       "task_obstacle": "Light up crypt",
       "items_needed": [
         "doll_body",
         "doll_head"
       ],
-      "post_room": null
+      "post_scene": null
     },
     "Remove old ghost": {
-      "room": "crypt",
+      "scene": "crypt",
       "task_obstacle": "Light up crypt",
       "items_needed": [
         "needle"
       ],
-      "post_room": null
+      "post_scene": null
     },
     "Remove hunting ghost": {
-      "room": "crypt",
+      "scene": "crypt",
       "task_obstacle": "Light up crypt",
       "items_needed": [
         "bugle"
       ],
-      "post_room": null
+      "post_scene": null
     },
     "Open laboratory": {
-      "room": "library",
+      "scene": "library",
       "task_obstacle": null,
       "items_needed": [
         "blue_book"
       ],
-      "post_room": null
+      "post_scene": null
     },
     "Produce nitro": {
-      "room": "laboratory",
+      "scene": "laboratory",
       "task_obstacle": null,
       "items_needed": [
         "matchbox"
       ],
-      "post_room": null
+      "post_scene": null
     },
     "Shoot down plant": {
-      "room": "greenhouse",
+      "scene": "greenhouse",
       "task_obstacle": null,
       "items_needed": [
         "rubber_band",
         "slingshot_handle"
       ],
-      "post_room": null
+      "post_scene": null
     },
     "Open barrel": {
-      "room": "wine_cellar",
+      "scene": "wine_cellar",
       "task_obstacle": null,
       "items_needed": [
         "bottle_1",
         "bottle_2",
         "bottle_3"
       ],
-      "post_room": null
+      "post_scene": null
     },
     "Tear down wall": {
-      "room": "barrel_room",
+      "scene": "barrel_room",
       "task_obstacle": null,
       "items_needed": [
         "hammer_head",
@@ -205,101 +205,101 @@
         "rabbit",
         "nitro"
       ],
-      "post_room": null
+      "post_scene": null
     },
     "Open treasure chamber": {
-      "room": "sewer_2",
+      "scene": "sewer_2",
       "task_obstacle": "Remove old ghost",
       "items_needed": [
         "ladder_key"
       ],
-      "post_room": null
+      "post_scene": null
     },
     "Plant flower": {
-      "room": "dining_room",
+      "scene": "dining_room",
       "task_obstacle": null,
       "items_needed": [
         "tall_flower"
       ],
-      "post_room": null
+      "post_scene": null
     },
     "Open dining room": {
-      "room": "main_hall",
+      "scene": "main_hall",
       "task_obstacle": "Remove dining ghost",
       "items_needed": [
         "dining_room_key"
       ],
-      "post_room": null
+      "post_scene": null
     },
     "Jump to table": {
-      "room": "dining_room",
+      "scene": "dining_room",
       "task_obstacle": null,
       "items_needed": [
         "spring"
       ],
-      "post_room": null
+      "post_scene": null
     },
     "Open tower": {
-      "room": "main_hall",
+      "scene": "main_hall",
       "task_obstacle": null,
       "items_needed": [
         "tower_key"
       ],
-      "post_room": null
+      "post_scene": null
     },
     "Open crypt": {
-      "room": "tower_1",
+      "scene": "tower_1",
       "task_obstacle": null,
       "items_needed": [
         "medallion"
       ],
-      "post_room": null
+      "post_scene": null
     },
     "Light up crypt": {
-      "room": "crypt",
+      "scene": "crypt",
       "task_obstacle": null,
       "items_needed": [
         "wick",
         "matchbox"
       ],
-      "post_room": null
+      "post_scene": null
     },
     "Open gate": {
-      "room": "tower_2",
+      "scene": "tower_2",
       "task_obstacle": null,
       "items_needed": [
         "lever"
       ],
-      "post_room": null
+      "post_scene": null
     },
     "Open bedroom": {
-      "room": "first_floor",
+      "scene": "first_floor",
       "task_obstacle": null,
       "items_needed": [
         "bedroom_key_1",
         "bedroom_key_2"
       ],
-      "post_room": null
+      "post_scene": null
     },
     "Hand over dentures": {
-      "room": "mouse_door",
+      "scene": "mouse_door",
       "task_obstacle": null,
       "items_needed": [
         "dentures"
       ],
-      "post_room": null
+      "post_scene": null
     },
     "Follow skeleton": {
-      "room": "finish",
+      "scene": "finish",
       "task_obstacle": null,
       "items_needed": null,
-      "post_room": null
+      "post_scene": null
     }
   },
-  "rooms": {
+  "scenes": {
     "main_hall": {
       "task_obstacle": null,
-      "connected_rooms": [
+      "connected_scenes": [
         "library",
         "kitchen",
         "first_floor",
@@ -309,20 +309,20 @@
     },
     "library": {
       "task_obstacle": null,
-      "connected_rooms": [
+      "connected_scenes": [
         "main_hall",
         "laboratory"
       ]
     },
     "laboratory": {
       "task_obstacle": "Open laboratory",
-      "connected_rooms": [
+      "connected_scenes": [
         "library"
       ]
     },
     "kitchen": {
       "task_obstacle": null,
-      "connected_rooms": [
+      "connected_scenes": [
         "main_hall",
         "greenhouse",
         "wine_cellar"
@@ -330,64 +330,64 @@
     },
     "greenhouse": {
       "task_obstacle": "Shoot down plant",
-      "connected_rooms": [
+      "connected_scenes": [
         "kitchen"
       ]
     },
     "wine_cellar": {
       "task_obstacle": null,
-      "connected_rooms": [
+      "connected_scenes": [
         "kitchen",
         "barrel_room"
       ]
     },
     "barrel_room": {
       "task_obstacle": "Open barrel",
-      "connected_rooms": [
+      "connected_scenes": [
         "wine_cellar",
         "sewer_1"
       ]
     },
     "sewer_1": {
       "task_obstacle": "Tear down wall",
-      "connected_rooms": [
+      "connected_scenes": [
         "barrel_room",
         "sewer_2"
       ]
     },
     "sewer_2": {
       "task_obstacle": null,
-      "connected_rooms": [
+      "connected_scenes": [
         "treasure_chamber",
         "sewer_1"
       ]
     },
     "treasure_chamber": {
       "task_obstacle": "Open treasure chamber",
-      "connected_rooms": [
+      "connected_scenes": [
         "finish"
       ]
     },
     "finish": {
       "task_obstacle": null,
-      "connected_rooms": null
+      "connected_scenes": null
     },
     "dining_room": {
       "task_obstacle": "Open dining room",
-      "connected_rooms": [
+      "connected_scenes": [
         "main_hall",
         "dining_room_table"
       ]
     },
     "dining_room_table": {
       "task_obstacle": "Jump to table",
-      "connected_rooms": [
+      "connected_scenes": [
         "dining_room"
       ]
     },
     "tower_1": {
       "task_obstacle": "Open tower",
-      "connected_rooms": [
+      "connected_scenes": [
         "main_hall",
         "crypt",
         "tower_2"
@@ -395,33 +395,33 @@
     },
     "crypt": {
       "task_obstacle": "Open crypt",
-      "connected_rooms": [
+      "connected_scenes": [
         "tower_1"
       ]
     },
     "tower_2": {
       "task_obstacle": null,
-      "connected_rooms": [
+      "connected_scenes": [
         "tower_1",
         "girls_room"
       ]
     },
     "girls_room": {
       "task_obstacle": "Open gate",
-      "connected_rooms": [
+      "connected_scenes": [
         "tower_2",
         "clockworks"
       ]
     },
     "clockworks": {
       "task_obstacle": null,
-      "connected_rooms": [
+      "connected_scenes": [
         "girls_room"
       ]
     },
     "first_floor": {
       "task_obstacle": null,
-      "connected_rooms": [
+      "connected_scenes": [
         "main_hall",
         "observatory",
         "bedroom",
@@ -433,58 +433,58 @@
     },
     "observatory": {
       "task_obstacle": null,
-      "connected_rooms": [
+      "connected_scenes": [
         "first_floor"
       ]
     },
     "bedroom": {
       "task_obstacle": "Open bedroom",
-      "connected_rooms": [
+      "connected_scenes": [
         "first_floor"
       ]
     },
     "skull_stairs": {
       "task_obstacle": "Remove green ghost",
-      "connected_rooms": [
+      "connected_scenes": [
         "first_floor",
         "fake_treasure_room"
       ]
     },
     "fake_treasure_room": {
       "task_obstacle": null,
-      "connected_rooms": [
+      "connected_scenes": [
         "skull_stairs"
       ]
     },
     "hunting_room": {
       "task_obstacle": "Remove hunting ghost",
-      "connected_rooms": [
+      "connected_scenes": [
         "first_floor",
         "mouse_door"
       ]
     },
     "mouse_door": {
       "task_obstacle": null,
-      "connected_rooms": [
+      "connected_scenes": [
         "hunting_room"
       ]
     },
     "guest_room": {
       "task_obstacle": null,
-      "connected_rooms": [
+      "connected_scenes": [
         "first_floor"
       ]
     },
     "counts_room": {
       "task_obstacle": null,
-      "connected_rooms": [
+      "connected_scenes": [
         "first_floor",
         "lumber_room"
       ]
     },
     "lumber_room": {
       "task_obstacle": "Remove girl ghost",
-      "connected_rooms": [
+      "connected_scenes": [
         "counts_room"
       ]
     }

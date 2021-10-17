@@ -7,7 +7,7 @@
         "ant_mom"
       ],
       "items": [],
-      "furthest_room": "mushrooms",
+      "furthest_scene": "mushrooms",
       "one_time": false
     },
     "ant_queen": {
@@ -16,7 +16,7 @@
         "ant_queen"
       ],
       "items": [],
-      "furthest_room": "ant_castle",
+      "furthest_scene": "ant_castle",
       "one_time": false
     },
     "bat": {
@@ -25,7 +25,7 @@
         "bat"
       ],
       "items": [],
-      "furthest_room": "bat_cave",
+      "furthest_scene": "bat_cave",
       "one_time": false
     },
     "bird_nest_deliver": {
@@ -33,7 +33,7 @@
         "deliver_chick"
       ],
       "items": [],
-      "furthest_room": "birds_house",
+      "furthest_scene": "birds_house",
       "one_time": false
     },
     "bird_nest_talk": {
@@ -43,7 +43,7 @@
       "items": [
         "yellow_key"
       ],
-      "furthest_room": "birds_house",
+      "furthest_scene": "birds_house",
       "one_time": false
     },
     "bridge": {
@@ -51,7 +51,7 @@
         "fish"
       ],
       "items": [],
-      "furthest_room": "bridge",
+      "furthest_scene": "bridge",
       "one_time": false
     },
     "broom": {
@@ -59,7 +59,7 @@
       "items": [
         "broom"
       ],
-      "furthest_room": "path_bat",
+      "furthest_scene": "path_bat",
       "one_time": false
     },
     "bucket": {
@@ -67,7 +67,7 @@
       "items": [
         "bucket"
       ],
-      "furthest_room": "path_rose_bush",
+      "furthest_scene": "path_rose_bush",
       "one_time": false
     },
     "can": {
@@ -75,7 +75,7 @@
       "items": [
         "can"
       ],
-      "furthest_room": "path_bee",
+      "furthest_scene": "path_bee",
       "one_time": false
     },
     "cat": {
@@ -85,7 +85,7 @@
       "items": [
         "book"
       ],
-      "furthest_room": "cat",
+      "furthest_scene": "cat",
       "one_time": false
     },
     "diaper": {
@@ -93,7 +93,7 @@
       "items": [
         "diaper"
       ],
-      "furthest_room": "path_puddle",
+      "furthest_scene": "path_puddle",
       "one_time": false
     },
     "duck": {
@@ -103,7 +103,7 @@
       "items": [
         "needle"
       ],
-      "furthest_room": "duck",
+      "furthest_scene": "duck",
       "one_time": false
     },
     "find_chick": {
@@ -111,7 +111,7 @@
         "find_chick"
       ],
       "items": [],
-      "furthest_room": "bench",
+      "furthest_scene": "bench",
       "one_time": false
     },
     "fly": {
@@ -121,7 +121,7 @@
       "items": [
         "green_key"
       ],
-      "furthest_room": "fly",
+      "furthest_scene": "fly",
       "one_time": false
     },
     "fox_flowers": {
@@ -132,7 +132,7 @@
         "stick_blue",
         "flowers"
       ],
-      "furthest_room": "flower_bush",
+      "furthest_scene": "flower_bush",
       "one_time": false
     },
     "frog": {
@@ -140,7 +140,7 @@
         "frog"
       ],
       "items": [],
-      "furthest_room": "frog",
+      "furthest_scene": "frog",
       "one_time": false
     },
     "glasses": {
@@ -148,7 +148,7 @@
       "items": [
         "glasses"
       ],
-      "furthest_room": "rabbit",
+      "furthest_scene": "rabbit",
       "one_time": false
     },
     "handle": {
@@ -156,7 +156,7 @@
       "items": [
         "handle"
       ],
-      "furthest_room": "bee",
+      "furthest_scene": "bee",
       "one_time": false
     },
     "helmet": {
@@ -164,7 +164,7 @@
       "items": [
         "helmet"
       ],
-      "furthest_room": "squirrel",
+      "furthest_scene": "squirrel",
       "one_time": false
     },
     "help_bee": {
@@ -172,7 +172,7 @@
         "bee"
       ],
       "items": [],
-      "furthest_room": "bee",
+      "furthest_scene": "bee",
       "one_time": false
     },
     "help_elfs": {
@@ -180,7 +180,7 @@
         "elfs"
       ],
       "items": [],
-      "furthest_room": "elfs",
+      "furthest_scene": "elfs",
       "one_time": false
     },
     "help_owl": {
@@ -188,7 +188,7 @@
         "owl"
       ],
       "items": [],
-      "furthest_room": "owl",
+      "furthest_scene": "owl",
       "one_time": false
     },
     "help_rabbit": {
@@ -196,7 +196,7 @@
         "rabbit"
       ],
       "items": [],
-      "furthest_room": "rabbit",
+      "furthest_scene": "rabbit",
       "one_time": false
     },
     "help_squirrel": {
@@ -204,7 +204,7 @@
         "squirrel"
       ],
       "items": [],
-      "furthest_room": "squirrel",
+      "furthest_scene": "squirrel",
       "one_time": false
     },
     "lake_bottom": {
@@ -215,7 +215,7 @@
         "worm",
         "horn"
       ],
-      "furthest_room": "lake_bottom",
+      "furthest_scene": "lake_bottom",
       "one_time": false
     },
     "ludo_dice": {
@@ -223,7 +223,7 @@
       "items": [
         "ludo_dice"
       ],
-      "furthest_room": "bat_entry",
+      "furthest_scene": "bat_entry",
       "one_time": false
     },
     "mirror": {
@@ -231,7 +231,7 @@
       "items": [
         "mirror"
       ],
-      "furthest_room": "outside_shed",
+      "furthest_scene": "outside_shed",
       "one_time": false
     },
     "monkey": {
@@ -241,7 +241,7 @@
       "items": [
         "stick_yellow"
       ],
-      "furthest_room": "wall",
+      "furthest_scene": "wall",
       "one_time": false
     },
     "pants": {
@@ -249,7 +249,7 @@
       "items": [
         "pants"
       ],
-      "furthest_room": "snail",
+      "furthest_scene": "snail",
       "one_time": false
     },
     "playground_horse": {
@@ -257,7 +257,7 @@
       "items": [
         "sheet"
       ],
-      "furthest_room": "playground_horse",
+      "furthest_scene": "playground_horse",
       "one_time": false
     },
     "playground_sandbox": {
@@ -266,7 +266,7 @@
         "nut",
         "dummy"
       ],
-      "furthest_room": "playground_sandbox",
+      "furthest_scene": "playground_sandbox",
       "one_time": false
     },
     "purple_stick": {
@@ -274,7 +274,7 @@
       "items": [
         "stick_purple"
       ],
-      "furthest_room": "path_elfs",
+      "furthest_scene": "path_elfs",
       "one_time": false
     },
     "radio": {
@@ -282,7 +282,7 @@
       "items": [
         "radio"
       ],
-      "furthest_room": "owl",
+      "furthest_scene": "owl",
       "one_time": false
     },
     "rocket_mouse": {
@@ -290,7 +290,7 @@
         "mouse"
       ],
       "items": [],
-      "furthest_room": "rocket",
+      "furthest_scene": "rocket",
       "one_time": true
     },
     "rocket_stick": {
@@ -298,7 +298,7 @@
       "items": [
         "stick_red"
       ],
-      "furthest_room": "rocket",
+      "furthest_scene": "rocket",
       "one_time": false
     },
     "secret_hideout": {
@@ -309,7 +309,7 @@
       "items": [
         "fishing_pole"
       ],
-      "furthest_room": "secret_hideout",
+      "furthest_scene": "secret_hideout",
       "one_time": false
     },
     "shed_closets": {
@@ -319,7 +319,7 @@
       "items": [
         "gas"
       ],
-      "furthest_room": "shed",
+      "furthest_scene": "shed",
       "one_time": false
     },
     "shed_flashlight": {
@@ -327,7 +327,7 @@
       "items": [
         "flashlight"
       ],
-      "furthest_room": "shed",
+      "furthest_scene": "shed",
       "one_time": false
     },
     "snake": {
@@ -338,7 +338,7 @@
         "stick_green",
         "crown"
       ],
-      "furthest_room": "snake",
+      "furthest_scene": "snake",
       "one_time": false
     },
     "start": {
@@ -349,7 +349,7 @@
         "letter",
         "elf_hat"
       ],
-      "furthest_room": "ladder",
+      "furthest_scene": "ladder",
       "one_time": false
     },
     "statue_bottom": {
@@ -358,7 +358,7 @@
         "garlic_box",
         "strawberries"
       ],
-      "furthest_room": "statue_bottom",
+      "furthest_scene": "statue_bottom",
       "one_time": false
     },
     "statue_top": {
@@ -366,7 +366,7 @@
         "statue"
       ],
       "items": [],
-      "furthest_room": "statue_head",
+      "furthest_scene": "statue_head",
       "one_time": false
     },
     "trash": {
@@ -376,7 +376,7 @@
       "items": [
         "nose"
       ],
-      "furthest_room": "trashbin",
+      "furthest_scene": "trashbin",
       "one_time": false
     },
     "tree_trunk_chest": {
@@ -386,7 +386,7 @@
         "trunk_top"
       ],
       "items": [],
-      "furthest_room": "trunk_top",
+      "furthest_scene": "trunk_top",
       "one_time": false
     },
     "trumpet": {
@@ -394,7 +394,7 @@
       "items": [
         "trumpet"
       ],
-      "furthest_room": "elfs",
+      "furthest_scene": "elfs",
       "one_time": false
     },
     "well_top": {
@@ -405,7 +405,7 @@
         "cake",
         "diving_mask"
       ],
-      "furthest_room": "well_top",
+      "furthest_scene": "well_top",
       "one_time": false
     }
   },
