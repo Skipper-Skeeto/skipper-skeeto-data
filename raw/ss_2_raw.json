@@ -23,7 +23,7 @@
     },
     "bottle_1": {
       "description": "Bottle (labelled)",
-      "scene": "dining_room_table",
+      "scene": "dining_table",
       "task_obstacle": null
     },
     "bottle_2": {
@@ -43,7 +43,7 @@
     },
     "dentures": {
       "description": "Dentures",
-      "scene": "dining_room_table",
+      "scene": "dining_table",
       "task_obstacle": null
     },
     "dining_room_key": {
@@ -325,7 +325,7 @@
     },
     "sewer_wall": {
       "description": "Tear down wall",
-      "scene": "barrel_room",
+      "scene": "barrel",
       "task_obstacle": null,
       "items_needed": [
         "hammer_head",
@@ -347,7 +347,7 @@
     }
   },
   "scenes": {
-    "barrel_room": {
+    "barrel": {
       "description": "Inside barrel",
       "task_obstacle": "open_barrel",
       "connected_scenes": [
@@ -389,10 +389,10 @@
       "task_obstacle": "open_dining_room",
       "connected_scenes": [
         "main_hall",
-        "dining_room_table"
+        "dining_table"
       ]
     },
-    "dining_room_table": {
+    "dining_table": {
       "description": "Dining table",
       "task_obstacle": "table_jump",
       "connected_scenes": [
@@ -514,7 +514,7 @@
       "description": "First sewer",
       "task_obstacle": "sewer_wall",
       "connected_scenes": [
-        "barrel_room",
+        "barrel",
         "sewer_2"
       ]
     },
@@ -563,7 +563,7 @@
       "task_obstacle": null,
       "connected_scenes": [
         "kitchen",
-        "barrel_room"
+        "barrel"
       ]
     }
   }
