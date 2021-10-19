@@ -2,118 +2,147 @@
   "start_scene": "main_hall",
   "items": {
     "battery": {
+      "description": "Battery",
       "scene": "tower_2",
       "task_obstacle": null
     },
     "bedroom_key_1": {
+      "description": "Grey key handle",
       "scene": "dining_room",
       "task_obstacle": "plant_flower"
     },
     "bedroom_key_2": {
+      "description": "Grey key head",
       "scene": "first_floor",
       "task_obstacle": null
     },
     "blue_book": {
+      "description": "Blue book",
       "scene": "guest_room",
       "task_obstacle": null
     },
     "bottle_1": {
+      "description": "Bottle (labelled)",
       "scene": "dining_room_table",
       "task_obstacle": null
     },
     "bottle_2": {
+      "description": "Bottle (basketwork)",
       "scene": "fake_treasure_room",
       "task_obstacle": null
     },
     "bottle_3": {
+      "description": "Bottle (small round)",
       "scene": "hunting_room",
       "task_obstacle": null
     },
     "bugle": {
+      "description": "Bugle",
       "scene": "lumber_room",
       "task_obstacle": null
     },
     "dentures": {
+      "description": "Dentures",
       "scene": "dining_room_table",
       "task_obstacle": null
     },
     "dining_room_key": {
+      "description": "Yellow thick straight key (dining room)",
       "scene": "counts_room",
       "task_obstacle": null
     },
     "doll_body": {
+      "description": "Doll body",
       "scene": "girls_room",
       "task_obstacle": null
     },
     "doll_head": {
+      "description": "Doll head",
       "scene": "wine_cellar",
       "task_obstacle": null
     },
     "hammer_handle": {
+      "description": "Hammer handle",
       "scene": "guest_room",
       "task_obstacle": null
     },
     "hammer_head": {
+      "description": "Hammer head",
       "scene": "tower_1",
       "task_obstacle": null
     },
     "ladder_key": {
+      "description": "Yellow thin straight key",
       "scene": "observatory",
       "task_obstacle": null
     },
     "lever": {
+      "description": "Gate lever",
       "scene": "counts_room",
       "task_obstacle": null
     },
     "matchbox": {
+      "description": "Matchbox",
       "scene": "main_hall",
       "task_obstacle": null
     },
     "medallion": {
+      "description": "Medallion",
       "scene": "main_hall",
       "task_obstacle": null
     },
     "needle": {
+      "description": "Needle",
       "scene": "bedroom",
       "task_obstacle": null
     },
     "nitro": {
+      "description": "Nitro",
       "scene": "laboratory",
       "task_obstacle": "nitro"
     },
     "penny": {
+      "description": "Penny",
       "scene": "mouse_door",
       "task_obstacle": "hand_over_dentures"
     },
     "rabbit": {
+      "description": "Rabbit",
       "scene": "mouse_door",
       "task_obstacle": null
     },
     "rubber_band": {
+      "description": "Rubber band",
       "scene": "observatory",
       "task_obstacle": null
     },
     "slingshot_handle": {
+      "description": "Slingshot handle",
       "scene": "counts_room",
       "task_obstacle": null
     },
     "spoon": {
+      "description": "Spoon",
       "scene": "kitchen",
       "task_obstacle": null
     },
     "spring": {
+      "description": "Spring",
       "scene": "clockworks",
       "task_obstacle": null
     },
     "tall_flower": {
+      "description": "White flower",
       "scene": "greenhouse",
       "task_obstacle": null
     },
     "tower_key": {
+      "description": "Yellow slanted key",
       "scene": "library",
       "task_obstacle": null
     },
     "wick": {
+      "description": "Wick",
       "scene": "kitchen",
       "task_obstacle": null
     }
@@ -319,6 +348,7 @@
   },
   "scenes": {
     "barrel_room": {
+      "description": "Inside barrel",
       "task_obstacle": "open_barrel",
       "connected_scenes": [
         "wine_cellar",
@@ -326,18 +356,21 @@
       ]
     },
     "bedroom": {
+      "description": "Master bedroom (2nd door)",
       "task_obstacle": "open_bedroom",
       "connected_scenes": [
         "first_floor"
       ]
     },
     "clockworks": {
+      "description": "Clockworks",
       "task_obstacle": null,
       "connected_scenes": [
         "girls_room"
       ]
     },
     "counts_room": {
+      "description": "Counts room (6th door)",
       "task_obstacle": null,
       "connected_scenes": [
         "first_floor",
@@ -345,12 +378,14 @@
       ]
     },
     "crypt": {
+      "description": "Crypt (coffins)",
       "task_obstacle": "open_crypt",
       "connected_scenes": [
         "tower_1"
       ]
     },
     "dining_room": {
+      "description": "Dining room",
       "task_obstacle": "open_dining_room",
       "connected_scenes": [
         "main_hall",
@@ -358,22 +393,26 @@
       ]
     },
     "dining_room_table": {
+      "description": "Dining table",
       "task_obstacle": "table_jump",
       "connected_scenes": [
         "dining_room"
       ]
     },
     "fake_treasure_room": {
+      "description": "fake_treasure_room",
       "task_obstacle": null,
       "connected_scenes": [
         "skull_stairs"
       ]
     },
     "finish": {
+      "description": "Finish",
       "task_obstacle": null,
       "connected_scenes": null
     },
     "first_floor": {
+      "description": "First floor (main hall)",
       "task_obstacle": null,
       "connected_scenes": [
         "main_hall",
@@ -386,6 +425,7 @@
       ]
     },
     "girls_room": {
+      "description": "Girls room",
       "task_obstacle": "open_gate",
       "connected_scenes": [
         "tower_2",
@@ -393,18 +433,21 @@
       ]
     },
     "greenhouse": {
+      "description": "Greenhouse",
       "task_obstacle": "plant",
       "connected_scenes": [
         "kitchen"
       ]
     },
     "guest_room": {
+      "description": "Guest room (5th door)",
       "task_obstacle": null,
       "connected_scenes": [
         "first_floor"
       ]
     },
     "hunting_room": {
+      "description": "Hunting room (4th door)",
       "task_obstacle": "ghost_hunting",
       "connected_scenes": [
         "first_floor",
@@ -412,6 +455,7 @@
       ]
     },
     "kitchen": {
+      "description": "Kitchen",
       "task_obstacle": null,
       "connected_scenes": [
         "main_hall",
@@ -420,12 +464,14 @@
       ]
     },
     "laboratory": {
+      "description": "Laboratory",
       "task_obstacle": "open_laboratory",
       "connected_scenes": [
         "library"
       ]
     },
     "library": {
+      "description": "Library",
       "task_obstacle": null,
       "connected_scenes": [
         "main_hall",
@@ -433,12 +479,14 @@
       ]
     },
     "lumber_room": {
+      "description": "Lumber room",
       "task_obstacle": "ghost_girl",
       "connected_scenes": [
         "counts_room"
       ]
     },
     "main_hall": {
+      "description": "Main hall (ground floor)",
       "task_obstacle": null,
       "connected_scenes": [
         "library",
@@ -449,18 +497,21 @@
       ]
     },
     "mouse_door": {
+      "description": "Mouse door",
       "task_obstacle": null,
       "connected_scenes": [
         "hunting_room"
       ]
     },
     "observatory": {
+      "description": "Observatory (1st door)",
       "task_obstacle": null,
       "connected_scenes": [
         "first_floor"
       ]
     },
     "sewer_1": {
+      "description": "First sewer",
       "task_obstacle": "sewer_wall",
       "connected_scenes": [
         "barrel_room",
@@ -468,6 +519,7 @@
       ]
     },
     "sewer_2": {
+      "description": "Second sewer",
       "task_obstacle": null,
       "connected_scenes": [
         "treasure_chamber",
@@ -475,6 +527,7 @@
       ]
     },
     "skull_stairs": {
+      "description": "Skull stairs (3rd door)",
       "task_obstacle": "ghost_green",
       "connected_scenes": [
         "first_floor",
@@ -482,6 +535,7 @@
       ]
     },
     "tower_1": {
+      "description": "Clock tower base",
       "task_obstacle": "open_tower",
       "connected_scenes": [
         "main_hall",
@@ -490,6 +544,7 @@
       ]
     },
     "tower_2": {
+      "description": "Clock tower stairs",
       "task_obstacle": null,
       "connected_scenes": [
         "tower_1",
@@ -497,12 +552,14 @@
       ]
     },
     "treasure_chamber": {
+      "description": "Treasure chamber",
       "task_obstacle": "open_treasure_chamber",
       "connected_scenes": [
         "finish"
       ]
     },
     "wine_cellar": {
+      "description": "Wine Cellar",
       "task_obstacle": null,
       "connected_scenes": [
         "kitchen",
