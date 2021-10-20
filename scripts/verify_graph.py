@@ -41,8 +41,8 @@ def check_edge_lengths(graph_data, raw_data, warning_prefix):
         from_vertex = vertices[str(from_vertex_key)]
         to_vertex = vertices[str(to_vertex_key)]
         
-        from_room = from_vertex["furthest_room"]
-        to_room = to_vertex["furthest_room"]
+        from_scene = from_vertex["furthest_scene"]
+        to_scene = to_vertex["furthest_scene"]
 
         expected_length = edge["length"]
 
@@ -58,21 +58,21 @@ def check_edge_lengths(graph_data, raw_data, warning_prefix):
                     vertex = vertices[str(condition_vertex)]
                     alternative_conditions.extend(vertex["items"], vertex["tasks"])
 
-        post_room = None
+        post_scene = None
         for task in from_vertex["tasks"]:
-            if raw_data["tasks"][task]["post_room"] is not None:
-                post_room = raw_data["tasks"][task]["post_room"]
+            if raw_data["tasks"][task]["post_scene"] is not None:
+                post_scene = raw_data["tasks"][task]["post_scene"]
 
-        start_room = from_room
+        start_scene = from_scene
         additional_length = 0
-        if post_room is not None:
-            start_room = post_room
+        if post_scene is not None:
+            start_scene = post_scene
             additional_length = 1
             
-        actual_length = calculate_minimum_distance(raw_data, start_room, to_room, [], conditions)
+        actual_length = calculate_minimum_distance(raw_data, start_scene, to_scene, [], conditions)
 
         if actual_length is None:
-            actual_length = calculate_minimum_distance(raw_data, start_room, to_room, [], alternative_conditions)
+            actual_length = calculate_minimum_distance(raw_data, start_scene, to_scene, [], alternative_conditions)
             
         
         if actual_length is not None:
@@ -80,43 +80,43 @@ def check_edge_lengths(graph_data, raw_data, warning_prefix):
 
         if expected_length != actual_length:
             all_good = False
-            print(warning_prefix + "Exptected length for edge from vertex", edge["from"], "(room \"" + str(from_room) + "\") to vertex", edge["to"], "(room \"" + str(to_room) + "\")",
+            print(warning_prefix + "Exptected length for edge from vertex", edge["from"], "(scene \"" + str(from_scene) + "\") to vertex", edge["to"], "(scene \"" + str(to_scene) + "\")",
                   "to be", expected_length, "but actual length is calculated to be", actual_length)
 
     return all_good
 
 
-def calculate_minimum_distance(raw_data, from_room, to_room, visited_rooms, conditions):
-    if from_room == to_room:
+def calculate_minimum_distance(raw_data, from_scene, to_scene, visited_scenes, conditions):
+    if from_scene == to_scene:
         return 0
 
-    minimum_distance_for_next_rooms = None
+    minimum_distance_for_next_scenes = None
 
-    for next_room_key in raw_data["rooms"][from_room]["connected_rooms"]:
-        if next_room_key in visited_rooms:
+    for next_scene_key in raw_data["scenes"][from_scene]["connected_scenes"]:
+        if next_scene_key in visited_scenes:
             continue
 
-        next_room = raw_data["rooms"][next_room_key]
+        next_scene = raw_data["scenes"][next_scene_key]
 
-        task_obstacle_key = next_room["task_obstacle"]
+        task_obstacle_key = next_scene["task_obstacle"]
         if task_obstacle_key is not None:
             if not conditions.can_fulfill(task_obstacle_key):
                 continue
                 
-        next_visited_rooms = visited_rooms.copy()
-        next_visited_rooms.append(next_room_key)
+        next_visited_scenes = visited_scenes.copy()
+        next_visited_scenes.append(next_scene_key)
 
-        distance = calculate_minimum_distance(raw_data, next_room_key, to_room, next_visited_rooms, conditions)
+        distance = calculate_minimum_distance(raw_data, next_scene_key, to_scene, next_visited_scenes, conditions)
         if distance is None:
             continue
 
-        if minimum_distance_for_next_rooms is None or distance < minimum_distance_for_next_rooms:
-            minimum_distance_for_next_rooms = distance
+        if minimum_distance_for_next_scenes is None or distance < minimum_distance_for_next_scenes:
+            minimum_distance_for_next_scenes = distance
 
-    if minimum_distance_for_next_rooms is None:
+    if minimum_distance_for_next_scenes is None:
         return None
 
-    return minimum_distance_for_next_rooms + 1
+    return minimum_distance_for_next_scenes + 1
 
 def fetch_graph_ids():
     graph_ids = []
