@@ -28,8 +28,8 @@ this move should be counted as a move between scenes, so be aware of this when c
 move between scenes in the game and you as a player always see exactly one scene at a time.
   * Each scene can contain one/more items that can be picked up and/or tasks that can be solved.
   * Scenes can be "locked" until some task has been solved (`task_obstacle`). Note that this task might be inside the 
-scene, meaning it should be solved as the first thing when entering the scene. This could for instance be a character in
-you need to beat. 
+scene, meaning it should be solved as the first thing when entering the scene. This could for instance be a boss the 
+user needs to beat. 
   * Currently the distance between connected scenes (see `connected_scenes`) are weighted equally. 
 
 As a collective term, picking up items, solving tasks and moving to a scene can be defined as _actions_.
@@ -83,8 +83,8 @@ which means there's a lot of possible ways to walk around in the park.
 The game has two editions with different tasks/items and therefore two data sets.
 
 #### 1st edition _(ID 1-1)_
-Has a bit less required tasks to complete compared to the second edition, but does instead have some musical notes you 
-can pick up and play.
+Has a bit less tasks that is required to complete compared to the second edition, but does instead have some musical 
+notes you optionally can pick up and play.
 
 #### 2nd edition _(ID 1-2)_ 
 The most known edition as it's been released the most times. It's a bit more complex than the first edition as it does 
