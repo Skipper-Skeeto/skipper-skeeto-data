@@ -96,11 +96,6 @@
       "scene": "fly",
       "task_obstacle": null
     },
-    "handle": {
-      "description": "Handle",
-      "scene": "bee",
-      "task_obstacle": null
-    },
     "helmet": {
       "description": "Helmet",
       "scene": "squirrel",
@@ -484,15 +479,6 @@
       "items_needed": null,
       "post_scene": null
     },
-    "winch": {
-      "description": "Fix well winch",
-      "scene": "well_top",
-      "task_obstacle": null,
-      "items_needed": [
-        "handle"
-      ],
-      "post_scene": null
-    },
     "witch": {
       "description": "Remove witch",
       "scene": "trunk_bottom",
@@ -868,20 +854,12 @@
         "rat"
       ]
     },
-    "well_bottom": {
-      "description": "Well bottom",
-      "task_obstacle": "winch",
-      "connected_scenes": [
-        "well_top"
-      ]
-    },
     "well_top": {
       "description": "Well top",
       "task_obstacle": null,
       "connected_scenes": [
         "ant_castle",
-        "rat",
-        "well_bottom"
+        "rat"
       ]
     }
   }

@@ -12,7 +12,6 @@
     },
     "ant_queen": {
       "tasks": [
-        "winch",
         "ant_queen"
       ],
       "items": [],
@@ -149,14 +148,6 @@
         "glasses"
       ],
       "furthest_scene": "rabbit",
-      "one_time": false
-    },
-    "handle": {
-      "tasks": [],
-      "items": [
-        "handle"
-      ],
-      "furthest_scene": "bee",
       "one_time": false
     },
     "helmet": {
@@ -534,8 +525,30 @@
     },
     {
       "from": "broom",
-      "to": "handle",
+      "to": "can",
       "length": 2,
+      "conditions": []
+    },
+    {
+      "from": "broom",
+      "to": "fly",
+      "length": 3,
+      "conditions": [
+        "well_top"
+      ]
+    },
+    {
+      "from": "broom",
+      "to": "help_bee",
+      "length": 2,
+      "conditions": [
+        "bucket"
+      ]
+    },
+    {
+      "from": "broom",
+      "to": "start",
+      "length": 3,
       "conditions": []
     },
     {
@@ -623,14 +636,44 @@
     },
     {
       "from": "can",
-      "to": "handle",
-      "length": 1,
+      "to": "broom",
+      "length": 2,
       "conditions": []
+    },
+    {
+      "from": "can",
+      "to": "duck",
+      "length": 2,
+      "conditions": [
+        "mirror"
+      ]
+    },
+    {
+      "from": "can",
+      "to": "fly",
+      "length": 2,
+      "conditions": [
+        "well_top"
+      ]
+    },
+    {
+      "from": "can",
+      "to": "help_bee",
+      "length": 1,
+      "conditions": [
+        "bucket"
+      ]
     },
     {
       "from": "can",
       "to": "pants",
       "length": 1,
+      "conditions": []
+    },
+    {
+      "from": "can",
+      "to": "start",
+      "length": 2,
       "conditions": []
     },
     {
@@ -728,8 +771,30 @@
     },
     {
       "from": "duck",
-      "to": "handle",
+      "to": "can",
+      "length": 2,
+      "conditions": []
+    },
+    {
+      "from": "duck",
+      "to": "fly",
+      "length": 2,
+      "conditions": [
+        "well_top"
+      ]
+    },
+    {
+      "from": "duck",
+      "to": "help_bee",
       "length": 1,
+      "conditions": [
+        "bucket"
+      ]
+    },
+    {
+      "from": "duck",
+      "to": "start",
+      "length": 2,
       "conditions": []
     },
     {
@@ -780,9 +845,31 @@
     },
     {
       "from": "fly",
-      "to": "handle",
-      "length": 1,
+      "to": "broom",
+      "length": 3,
       "conditions": []
+    },
+    {
+      "from": "fly",
+      "to": "can",
+      "length": 2,
+      "conditions": []
+    },
+    {
+      "from": "fly",
+      "to": "duck",
+      "length": 2,
+      "conditions": [
+        "mirror"
+      ]
+    },
+    {
+      "from": "fly",
+      "to": "help_bee",
+      "length": 1,
+      "conditions": [
+        "bucket"
+      ]
     },
     {
       "from": "fly",
@@ -851,54 +938,6 @@
       ]
     },
     {
-      "from": "handle",
-      "to": "broom",
-      "length": 2,
-      "conditions": []
-    },
-    {
-      "from": "handle",
-      "to": "can",
-      "length": 1,
-      "conditions": []
-    },
-    {
-      "from": "handle",
-      "to": "duck",
-      "length": 1,
-      "conditions": [
-        "mirror"
-      ]
-    },
-    {
-      "from": "handle",
-      "to": "fly",
-      "length": 1,
-      "conditions": [
-        "well_top"
-      ]
-    },
-    {
-      "from": "handle",
-      "to": "help_bee",
-      "length": 0,
-      "conditions": [
-        "bucket"
-      ]
-    },
-    {
-      "from": "handle",
-      "to": "purple_stick",
-      "length": 3,
-      "conditions": []
-    },
-    {
-      "from": "handle",
-      "to": "start",
-      "length": 1,
-      "conditions": []
-    },
-    {
       "from": "helmet",
       "to": "diaper",
       "length": 1,
@@ -928,8 +967,36 @@
     },
     {
       "from": "help_bee",
-      "to": "handle",
-      "length": 0,
+      "to": "broom",
+      "length": 2,
+      "conditions": []
+    },
+    {
+      "from": "help_bee",
+      "to": "can",
+      "length": 1,
+      "conditions": []
+    },
+    {
+      "from": "help_bee",
+      "to": "duck",
+      "length": 1,
+      "conditions": [
+        "mirror"
+      ]
+    },
+    {
+      "from": "help_bee",
+      "to": "fly",
+      "length": 1,
+      "conditions": [
+        "well_top"
+      ]
+    },
+    {
+      "from": "help_bee",
+      "to": "start",
+      "length": 1,
       "conditions": []
     },
     {
@@ -1241,12 +1308,6 @@
     },
     {
       "from": "purple_stick",
-      "to": "handle",
-      "length": 3,
-      "conditions": []
-    },
-    {
-      "from": "purple_stick",
       "to": "lake_bottom",
       "length": 2,
       "conditions": [
@@ -1507,9 +1568,31 @@
     },
     {
       "from": "start",
-      "to": "handle",
-      "length": 1,
+      "to": "broom",
+      "length": 3,
       "conditions": []
+    },
+    {
+      "from": "start",
+      "to": "can",
+      "length": 2,
+      "conditions": []
+    },
+    {
+      "from": "start",
+      "to": "duck",
+      "length": 2,
+      "conditions": [
+        "mirror"
+      ]
+    },
+    {
+      "from": "start",
+      "to": "help_bee",
+      "length": 1,
+      "conditions": [
+        "bucket"
+      ]
     },
     {
       "from": "start",
