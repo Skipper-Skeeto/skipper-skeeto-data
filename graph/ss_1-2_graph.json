@@ -583,14 +583,6 @@
     },
     {
       "from": "bucket",
-      "to": "help_rabbit",
-      "length": 1,
-      "conditions": [
-        "pants"
-      ]
-    },
-    {
-      "from": "bucket",
       "to": "mirror",
       "length": 2,
       "conditions": [
@@ -746,14 +738,6 @@
       "to": "helmet",
       "length": 1,
       "conditions": []
-    },
-    {
-      "from": "diaper",
-      "to": "help_squirrel",
-      "length": 1,
-      "conditions": [
-        "playground_sandbox"
-      ]
     },
     {
       "from": "diaper",
@@ -923,14 +907,6 @@
     },
     {
       "from": "glasses",
-      "to": "help_squirrel",
-      "length": 1,
-      "conditions": [
-        "playground_sandbox"
-      ]
-    },
-    {
-      "from": "glasses",
       "to": "monkey",
       "length": 1,
       "conditions": [
@@ -948,14 +924,6 @@
       "to": "glasses",
       "length": 1,
       "conditions": []
-    },
-    {
-      "from": "helmet",
-      "to": "help_rabbit",
-      "length": 1,
-      "conditions": [
-        "pants"
-      ]
     },
     {
       "from": "helmet",
@@ -1013,48 +981,8 @@
     },
     {
       "from": "help_rabbit",
-      "to": "bucket",
-      "length": 1,
-      "conditions": []
-    },
-    {
-      "from": "help_rabbit",
       "to": "glasses",
       "length": 0,
-      "conditions": []
-    },
-    {
-      "from": "help_rabbit",
-      "to": "helmet",
-      "length": 1,
-      "conditions": []
-    },
-    {
-      "from": "help_rabbit",
-      "to": "help_squirrel",
-      "length": 1,
-      "conditions": [
-        "playground_sandbox"
-      ]
-    },
-    {
-      "from": "help_rabbit",
-      "to": "monkey",
-      "length": 1,
-      "conditions": [
-        "radio"
-      ]
-    },
-    {
-      "from": "help_squirrel",
-      "to": "diaper",
-      "length": 1,
-      "conditions": []
-    },
-    {
-      "from": "help_squirrel",
-      "to": "glasses",
-      "length": 1,
       "conditions": []
     },
     {
@@ -1062,14 +990,6 @@
       "to": "helmet",
       "length": 0,
       "conditions": []
-    },
-    {
-      "from": "help_squirrel",
-      "to": "help_rabbit",
-      "length": 1,
-      "conditions": [
-        "pants"
-      ]
     },
     {
       "from": "lake_bottom",
