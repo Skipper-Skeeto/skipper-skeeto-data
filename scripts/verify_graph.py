@@ -27,6 +27,14 @@ class Conditions:
         return task_can_be_completed
 
 
+class RawRoute:
+
+    def __init__(self):
+        self.length = 0
+        self.completed_tasks = []
+        self.found_items = []
+
+
 def check_edge_lengths(graph_data, raw_data, warning_prefix):
     all_good = True
 
@@ -147,9 +155,9 @@ def check_graph_routes(graph_data, raw_data, warning_prefix):
             
             raw_routes = calculate_shortest_routes(raw_data, start_scene, to_vertex["furthest_scene"], [from_vertex["furthest_scene"]])
 
-            for calculated_length, task_obstacles in raw_routes:
-                expected_length = calculated_length + additional_length
-                completed_tasks, found_items = find_implicit_tasks_and_items(raw_data, task_obstacles)
+            for route in raw_routes:
+                expected_length = route.length + additional_length
+                completed_tasks, found_items = find_implicit_tasks_and_items(raw_data, route.completed_tasks)
 
                 allowed_condition_vertices = find_allowed_condition_vertices(graph_data["vertices"], raw_routes, last_edges, completed_tasks, found_items)
 
@@ -174,7 +182,7 @@ def check_graph_routes(graph_data, raw_data, warning_prefix):
 
 def calculate_shortest_routes(raw_data, from_scene_key, to_scene_key, visited_scenes):
     if from_scene_key == to_scene_key:
-        return [[0, []]]
+        return []
 
     from_scene = raw_data["scenes"][from_scene_key]
 
@@ -188,38 +196,39 @@ def calculate_shortest_routes(raw_data, from_scene_key, to_scene_key, visited_sc
         
         new_visited_scenes = visited_scenes.copy()
         new_visited_scenes.append(next_scene_key)
-        for length, task_obstacles in calculate_shortest_routes(raw_data, next_scene_key, to_scene_key, new_visited_scenes):
+        for route in calculate_shortest_routes(raw_data, next_scene_key, to_scene_key, new_visited_scenes):
             if task_obstacle is not None:
-                task_obstacles.append(task_obstacle)
+                route.completed_tasks.append(task_obstacle)
 
-            routes.append([length + 1, task_obstacles])
+            route.length += 1
+            routes.append(route)
 
-    highest_task_obstacles_count = 0
+    highest_completed_tasks_count = 0
     shortest_routes_map = {}
-    for length, task_obstacles in routes:
-        if str(task_obstacles) not in shortest_routes_map or shortest_routes_map[str(task_obstacles)][0] > length:
-               shortest_routes_map[str(task_obstacles)] = [length, task_obstacles]
+    for route in routes:
+        if str(route.completed_tasks) not in shortest_routes_map or shortest_routes_map[str(route.completed_tasks)][0] > length:
+               shortest_routes_map[str(route.completed_tasks)] = route
 
-        if len(task_obstacles) > highest_task_obstacles_count:
-            highest_task_obstacles_count = len(task_obstacles)
+        if len(route.completed_tasks) > highest_completed_tasks_count:
+            highest_completed_tasks_count = len(route.completed_tasks)
 
     shortest_routes = []
 
-    for task_obstacles_count in range(highest_task_obstacles_count + 1):
-        for length, task_obstacles in shortest_routes_map.values():
-            if len(task_obstacles) != task_obstacles_count:
+    for completed_tasks_count in range(highest_completed_tasks_count + 1):
+        for route in shortest_routes_map.values():
+            if len(route.completed_tasks) != completed_tasks_count:
                 continue
 
             has_better_alternative = False
-            for alternative_length, alternative_task_obstacles in shortest_routes:
-                if alternative_length <= length and all([alternative_task_obstacle in task_obstacles for alternative_task_obstacle in alternative_task_obstacles]):
+            for alternative_route in shortest_routes:
+                if alternative_route.length <= route.length and all(alternative_completed_task in route.completed_tasks for alternative_completed_task in [alternative_route.completed_tasks]):
                     has_better_alternative = True
                     break
 
             if has_better_alternative:
                 continue
             
-            shortest_routes.append([length, task_obstacles])
+            shortest_routes.append(route)
 
     return shortest_routes
 
