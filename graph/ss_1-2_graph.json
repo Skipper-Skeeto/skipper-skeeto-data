@@ -644,6 +644,7 @@
       "to": "trash",
       "length": 2,
       "conditions": [
+        "can",
         "diaper"
       ]
     },

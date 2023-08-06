@@ -25,10 +25,26 @@ class Conditions:
         task_can_be_completed = ((task["task_obstacle"] is None or task["task_obstacle"] in self.tasks) and all([item in self.items for item in task["items_needed"]]))
         
         return task_can_be_completed
-                
-        
 
-def check_edge_lengths(graph_data, raw_data, warning_prefix):
+
+class RawRoute:
+
+    def __init__(self):
+        self.length = 0
+        self.completed_tasks = []
+        self.found_items = []
+
+    def extendTasks(self, tasks):
+        self.completed_tasks.extend(tasks)
+        self.completed_tasks = list(set(self.completed_tasks))
+        self.completed_tasks.sort()  # Sort so it's good as key
+
+    def extendItems(self, items):
+        self.found_items.extend(items)
+        self.found_items = list(set(self.found_items))
+
+
+def check_edge_lengths(graph_data, raw_data):
     all_good = True
 
     edges = graph_data["edges"]
@@ -80,7 +96,7 @@ def check_edge_lengths(graph_data, raw_data, warning_prefix):
 
         if expected_length != actual_length:
             all_good = False
-            print(warning_prefix + "Exptected length for edge from vertex", edge["from"], "(scene \"" + str(from_scene) + "\") to vertex", edge["to"], "(scene \"" + str(to_scene) + "\")",
+            print("  - Exptected length for edge from vertex", edge["from"], "(scene \"" + str(from_scene) + "\") to vertex", edge["to"], "(scene \"" + str(to_scene) + "\")",
                   "to be", expected_length, "but actual length is calculated to be", actual_length)
 
     return all_good
@@ -117,6 +133,225 @@ def calculate_minimum_distance(raw_data, from_scene, to_scene, visited_scenes, c
         return None
 
     return minimum_distance_for_next_scenes + 1
+               
+
+def check_graph_routes(graph_data, raw_data):
+    all_good = True
+
+    for from_vertex_key in graph_data["vertices"]:
+        print("  - Checking ", from_vertex_key)
+        for to_vertex_key in graph_data["vertices"]:
+            if from_vertex_key == to_vertex_key:
+                continue
+
+            last_edges = []
+            for edge in graph_data["edges"]:
+                if edge["to"] == to_vertex_key:
+                    last_edges.append(edge)
+
+            if len(last_edges) == 0:
+                continue
+
+            from_vertex = graph_data["vertices"][from_vertex_key]
+            to_vertex = graph_data["vertices"][to_vertex_key]
+
+            start_scene = from_vertex["furthest_scene"]
+            additional_length = 0
+            for task_key in from_vertex["tasks"]:
+                post_scene = raw_data["tasks"][task_key]["post_scene"]
+                if post_scene is not None:
+                    start_scene = post_scene
+                    additional_length = 1
+            
+            raw_routes = calculate_shortest_routes(raw_data, start_scene, to_vertex["furthest_scene"], [from_vertex["furthest_scene"]])
+
+            for route in raw_routes:
+                expected_length = route.length + additional_length
+
+                allowed_condition_vertices = find_allowed_condition_vertices(graph_data["vertices"], raw_routes, last_edges, route.completed_tasks, route.found_items)
+
+                if allowed_condition_vertices is None:
+                    continue
+
+                max_length = expected_length + 1
+                result = calculate_shortest_graph_route(graph_data, from_vertex_key, to_vertex_key, allowed_condition_vertices, [from_vertex_key], 0, max_length)
+
+                if result is None:
+                    all_good = False
+                    print("  - Could not find a route from", from_vertex_key, "to", to_vertex_key, "(with expected task obstacles", route.completed_tasks, "and allowed conditions", str(allowed_condition_vertices) + ") either because there wasn't a route or the graph one was longer than the path (raw path length was", str(expected_length) + ")")
+                    continue
+
+                actual_length, raw_path = result
+                if(expected_length != actual_length):
+                    all_good = False
+                    print("  - Routes are not matching from", from_vertex_key, "to", str(to_vertex_key) + ". Raw path length was", expected_length, "and graph length was", str(actual_length) + ". Allowed task obstacles was " + str(route.completed_tasks) + " and allowed condition vertices was " + str(allowed_condition_vertices))
+
+    return all_good
+
+
+def calculate_shortest_routes(raw_data, from_scene_key, to_scene_key, visited_scenes):
+    if from_scene_key == to_scene_key:
+        return []
+
+    from_scene = raw_data["scenes"][from_scene_key]
+
+    routes = []
+
+    for next_scene_key in from_scene["connected_scenes"]:
+        if next_scene_key in visited_scenes:
+            continue
+
+        task_obstacle = raw_data["scenes"][next_scene_key]["task_obstacle"]
+        
+        new_visited_scenes = visited_scenes.copy()
+        new_visited_scenes.append(next_scene_key)
+        for route in calculate_shortest_routes(raw_data, next_scene_key, to_scene_key, new_visited_scenes):
+            if task_obstacle is not None:
+                tasks, items = find_implicit_tasks_and_items(raw_data, task_obstacle)
+                route.extendTasks(tasks)
+                route.extendItems(items)
+
+            route.length += 1
+            routes.append(route)
+
+    highest_completed_tasks_count = 0
+    shortest_routes_map = {}
+    for route in routes:
+        route_task_key = str(route.completed_tasks)
+        if route_task_key not in shortest_routes_map or shortest_routes_map[route_task_key].length > route.length:
+               shortest_routes_map[route_task_key] = route
+
+        if len(route.completed_tasks) > highest_completed_tasks_count:
+            highest_completed_tasks_count = len(route.completed_tasks)
+
+    shortest_routes = []
+
+    for completed_tasks_count in range(highest_completed_tasks_count + 1):
+        for route in shortest_routes_map.values():
+            if len(route.completed_tasks) != completed_tasks_count:
+                continue
+
+            has_better_alternative = False
+            for alternative_route in shortest_routes:
+                if alternative_route.length <= route.length and all(alternative_completed_task in route.completed_tasks for alternative_completed_task in [alternative_route.completed_tasks]):
+                    has_better_alternative = True
+                    break
+
+            if has_better_alternative:
+                continue
+            
+            shortest_routes.append(route)
+
+    return shortest_routes
+
+
+def calculate_shortest_graph_route(graph_data, from_vertex_key, to_vertex_key, allowed_condition_vertices, visited_vertices, previous_length, max_length):
+    if from_vertex_key == to_vertex_key:
+        return [0, [to_vertex_key]]
+
+    if previous_length >= max_length:
+        return None
+
+    best_result = None
+
+    for edge in graph_data["edges"]:
+        if edge["from"] != from_vertex_key or edge["to"] in visited_vertices:
+            continue
+
+        allowed_condition = True
+        for vertex_condition_key in edge["conditions"]:            
+            if vertex_condition_key not in allowed_condition_vertices:
+                allowed_condition = False
+
+        if not allowed_condition:
+            continue
+
+        new_visited_vertices = visited_vertices.copy()
+        new_visited_vertices.append(edge["to"])
+
+        result = calculate_shortest_graph_route(graph_data, edge["to"], to_vertex_key, allowed_condition_vertices, new_visited_vertices, previous_length + edge["length"], max_length)
+
+        if result is None:
+            continue
+
+        result[0] += edge["length"]
+        result[1].insert(0, edge["from"])
+
+        if best_result is None or result[0] < best_result[0]:
+            best_result = result
+
+    return best_result 
+
+
+def find_allowed_condition_vertices(vertices, all_raw_routes, last_edges, allowed_task_obstacles, found_items):
+    allowed_condition_vertices = []
+    for vertex_key, vertex in vertices.items():
+        conditons = Conditions()
+        conditons.extend(vertex["items"],vertex["tasks"])
+
+        for task in allowed_task_obstacles:
+            if conditons.can_fulfill(task):
+                allowed_condition_vertices.append(vertex_key)
+                break
+
+        if vertex_key not in allowed_task_obstacles:
+            for item in found_items:
+                if item in vertex["items"]:
+                    allowed_condition_vertices.append(vertex_key)
+
+
+    enter_condition_sets = []
+    for edge in last_edges:
+        new_enter_conditions = edge["conditions"]
+                    
+        if len(new_enter_conditions) > 0:
+            new_enter_conditions.sort()
+
+            if new_enter_conditions not in enter_condition_sets:
+                enter_condition_sets.append(new_enter_conditions)
+        else:
+            # There's one without conditions, that should always be picked
+            enter_condition_sets = []
+            break
+
+    if len(enter_condition_sets) > 0:
+        mininmum_condition_set = min(enter_condition_sets, key=len)
+
+        # Handle case where there is more than one entry.  If there is more
+        # with conditions, but the simplest one matches in all conditions we
+        # assume that's the condition that's actually needed in order to
+        # enter/solve the "end scene".  The remaining are just in another scene
+        # for some of the routes
+        for condition_set in enter_condition_sets:
+            for condition in mininmum_condition_set:
+                if condition not in condition_set:
+                    raise Exception("Cannot handle edges with mixed issue vertices: " + str(enter_condition_sets))                                           
+
+        for vertex in mininmum_condition_set:
+            if vertex not in allowed_condition_vertices:
+                allowed_condition_vertices.append(vertex)
+    
+    return allowed_condition_vertices
+
+def find_implicit_tasks_and_items(raw_data, task):
+    implicit_tasks = [task]
+    implicit_items = []
+
+    task_obstacle = raw_data["tasks"][task]["task_obstacle"]
+    if task_obstacle is not None:
+        extra_tasks, extra_items = find_implicit_tasks_and_items(raw_data, task_obstacle)
+        implicit_tasks.extend(extra_tasks)
+        implicit_items.extend(extra_items)
+
+    for item in raw_data["tasks"][task]["items_needed"]:
+        implicit_items.append(item)
+        task_obstacle = raw_data["items"][item]["task_obstacle"]
+        if task_obstacle is not None:
+            extra_tasks, extra_items = find_implicit_tasks_and_items(raw_data, task_obstacle)
+            implicit_tasks.extend(extra_tasks)
+            implicit_items.extend(extra_items)
+
+    return [implicit_tasks, implicit_items]
 
 def fetch_graph_ids():
     graph_ids = []
@@ -127,23 +362,30 @@ def fetch_graph_ids():
     return graph_ids
 
 parser = argparse.ArgumentParser(description='Verify graph data up against raw data')
-parser.add_argument('--warning-prefix', dest='warning_prefix', default=" - ",
-                    help='Prefix printed before warning messages')
 
 args = parser.parse_args()
-warning_prefix = args.warning_prefix
 
 exit_code = 0
 for game_version in fetch_graph_ids():
-    print("Check edge lenghts for game version " + game_version + ":")
+    print("Check graphs for game version " + game_version + ":")
     with open(os.path.join(graph_path, "ss_" + game_version + "_graph.json")) as graph_file:
         graph_data = json.load(graph_file)
     
     with open(os.path.join(raw_path, "ss_" + game_version + "_raw.json")) as graph_file:
         raw_data = json.load(graph_file)
 
-    if check_edge_lengths(graph_data, raw_data, warning_prefix):
-        print(" - OK")
+    # Checks all edges up against raw path data.  This is the simple check
+    print(" - Checking edge lenghts")
+    if check_edge_lengths(graph_data, raw_data):
+        print(" - Current edge lenghts: OK")
+    else:
+        exit_code = 1
+
+    # Checks all possible vertex-connection combinations (via one or more
+    # edges) up against raw path data.  This is the more complex check
+    print(" - Checking for missing edges")
+    if check_graph_routes(graph_data, raw_data):
+        print(" - Missing edges check: OK")
     else:
         exit_code = 1
 
