@@ -216,8 +216,9 @@ def calculate_shortest_routes(raw_data, from_scene_key, to_scene_key, visited_sc
     highest_completed_tasks_count = 0
     shortest_routes_map = {}
     for route in routes:
-        if str(route.completed_tasks) not in shortest_routes_map or shortest_routes_map[str(route.completed_tasks)][0] > length:
-               shortest_routes_map[str(route.completed_tasks)] = route
+        route_task_key = str(route.completed_tasks)
+        if route_task_key not in shortest_routes_map or shortest_routes_map[route_task_key].length > route.length:
+               shortest_routes_map[route_task_key] = route
 
         if len(route.completed_tasks) > highest_completed_tasks_count:
             highest_completed_tasks_count = len(route.completed_tasks)
