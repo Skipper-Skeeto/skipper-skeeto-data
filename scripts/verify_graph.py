@@ -34,6 +34,15 @@ class RawRoute:
         self.completed_tasks = []
         self.found_items = []
 
+    def extendTasks(self, tasks):
+        self.completed_tasks.extend(tasks)
+        self.completed_tasks = list(set(self.completed_tasks))
+        self.completed_tasks.sort()  # Sort so it's good as key
+
+    def extendItems(self, items):
+        self.found_items.extend(items)
+        self.found_items = list(set(self.found_items))
+
 
 def check_edge_lengths(graph_data, raw_data, warning_prefix):
     all_good = True
@@ -157,9 +166,8 @@ def check_graph_routes(graph_data, raw_data, warning_prefix):
 
             for route in raw_routes:
                 expected_length = route.length + additional_length
-                completed_tasks, found_items = find_implicit_tasks_and_items(raw_data, route.completed_tasks)
 
-                allowed_condition_vertices = find_allowed_condition_vertices(graph_data["vertices"], raw_routes, last_edges, completed_tasks, found_items)
+                allowed_condition_vertices = find_allowed_condition_vertices(graph_data["vertices"], raw_routes, last_edges, route.completed_tasks, route.found_items)
 
                 if allowed_condition_vertices is None:
                     continue
@@ -169,13 +177,13 @@ def check_graph_routes(graph_data, raw_data, warning_prefix):
 
                 if result is None:
                     all_good = False
-                    print(warning_prefix + "Could not find a route from", from_vertex_key, "to", to_vertex_key, "(with expected task obstacles", completed_tasks, "and allowed conditions", str(allowed_condition_vertices) + ") either because there wasn't a route or the graph one was longer than the path (raw path length was", str(expected_length) + ")")
+                    print(warning_prefix + "Could not find a route from", from_vertex_key, "to", to_vertex_key, "(with expected task obstacles", route.completed_tasks, "and allowed conditions", str(allowed_condition_vertices) + ") either because there wasn't a route or the graph one was longer than the path (raw path length was", str(expected_length) + ")")
                     continue
 
                 actual_length, raw_path = result
                 if(expected_length != actual_length):
                     all_good = False
-                    print(warning_prefix + "Routes are not matching from", from_vertex_key, "to", str(to_vertex_key) + ". Raw path length was", expected_length, "and graph length was", str(actual_length) + ". Allowed task obstacles was " + str(completed_tasks) + " and allowed condition vertices was " + str(allowed_condition_vertices))
+                    print(warning_prefix + "Routes are not matching from", from_vertex_key, "to", str(to_vertex_key) + ". Raw path length was", expected_length, "and graph length was", str(actual_length) + ". Allowed task obstacles was " + str(route.completed_tasks) + " and allowed condition vertices was " + str(allowed_condition_vertices))
 
     return all_good
 
@@ -198,7 +206,9 @@ def calculate_shortest_routes(raw_data, from_scene_key, to_scene_key, visited_sc
         new_visited_scenes.append(next_scene_key)
         for route in calculate_shortest_routes(raw_data, next_scene_key, to_scene_key, new_visited_scenes):
             if task_obstacle is not None:
-                route.completed_tasks.append(task_obstacle)
+                tasks, items = find_implicit_tasks_and_items(raw_data, task_obstacle)
+                route.extendTasks(tasks)
+                route.extendItems(items)
 
             route.length += 1
             routes.append(route)
@@ -318,50 +328,26 @@ def find_allowed_condition_vertices(vertices, all_raw_routes, last_edges, allowe
         for vertex in mininmum_condition_set:
             if vertex not in allowed_condition_vertices:
                 allowed_condition_vertices.append(vertex)
-
-    # In case we at this point figure out that in order to complete the graph
-    # path we've allowed some condition that potentially could've changed the
-    # raw path (as there would have been more items/tasks available) we simply
-    # skip this route as it doesn't make sense - and there will be another path
-    # with the "correct" conditions instead.  This can for instance be the case
-    # if the last scene has a task that cannot be completed unless you've been
-    # in a scene with a specific task obstacle.  For example in the 1st game,
-    # you cannot help the ant queen unless you've let down the snake (so it
-    # won't sense to look for paths that doesn't allow going via the snake)
-    for _, other_task_obstacles in all_raw_routes:
-        if allowed_task_obstacles != other_task_obstacles:
-            task_obstacles_difference = [task for task in other_task_obstacles if task not in allowed_task_obstacles]
-
-            for vertex_key in allowed_condition_vertices:
-                vertex = graph_data["vertices"][vertex_key]
-
-                conditons = Conditions()
-                conditons.extend(vertex["items"],vertex["tasks"])
-
-                for task in task_obstacles_difference:
-                    if conditons.can_fulfill(task):
-                        return None
     
     return allowed_condition_vertices
 
-def find_implicit_tasks_and_items(raw_data, task_obstacles):
-    implicit_tasks = task_obstacles.copy()
+def find_implicit_tasks_and_items(raw_data, task):
+    implicit_tasks = [task]
     implicit_items = []
 
-    for task in task_obstacles:
-        task_obstacle = raw_data["tasks"][task]["task_obstacle"]
+    task_obstacle = raw_data["tasks"][task]["task_obstacle"]
+    if task_obstacle is not None:
+        extra_tasks, extra_items = find_implicit_tasks_and_items(raw_data, task_obstacle)
+        implicit_tasks.extend(extra_tasks)
+        implicit_items.extend(extra_items)
+
+    for item in raw_data["tasks"][task]["items_needed"]:
+        implicit_items.append(item)
+        task_obstacle = raw_data["items"][item]["task_obstacle"]
         if task_obstacle is not None:
-            extra_tasks, extra_items = find_implicit_tasks_and_items(raw_data, [task_obstacle])
+            extra_tasks, extra_items = find_implicit_tasks_and_items(raw_data, task_obstacle)
             implicit_tasks.extend(extra_tasks)
             implicit_items.extend(extra_items)
-
-        for item in raw_data["tasks"][task]["items_needed"]:
-            implicit_items.append(item)
-            task_obstacle = raw_data["items"][item]["task_obstacle"]
-            if task_obstacle is not None:
-                extra_tasks, extra_items = find_implicit_tasks_and_items(raw_data, [task_obstacle])
-                implicit_tasks.extend(extra_tasks)
-                implicit_items.extend(extra_items)
 
     return [implicit_tasks, implicit_items]
 
