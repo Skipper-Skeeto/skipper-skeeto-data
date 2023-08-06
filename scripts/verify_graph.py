@@ -44,7 +44,7 @@ class RawRoute:
         self.found_items = list(set(self.found_items))
 
 
-def check_edge_lengths(graph_data, raw_data, warning_prefix):
+def check_edge_lengths(graph_data, raw_data):
     all_good = True
 
     edges = graph_data["edges"]
@@ -96,7 +96,7 @@ def check_edge_lengths(graph_data, raw_data, warning_prefix):
 
         if expected_length != actual_length:
             all_good = False
-            print(warning_prefix + "Exptected length for edge from vertex", edge["from"], "(scene \"" + str(from_scene) + "\") to vertex", edge["to"], "(scene \"" + str(to_scene) + "\")",
+            print("  - Exptected length for edge from vertex", edge["from"], "(scene \"" + str(from_scene) + "\") to vertex", edge["to"], "(scene \"" + str(to_scene) + "\")",
                   "to be", expected_length, "but actual length is calculated to be", actual_length)
 
     return all_good
@@ -135,10 +135,11 @@ def calculate_minimum_distance(raw_data, from_scene, to_scene, visited_scenes, c
     return minimum_distance_for_next_scenes + 1
                
 
-def check_graph_routes(graph_data, raw_data, warning_prefix):
+def check_graph_routes(graph_data, raw_data):
     all_good = True
 
     for from_vertex_key in graph_data["vertices"]:
+        print("  - Checking ", from_vertex_key)
         for to_vertex_key in graph_data["vertices"]:
             if from_vertex_key == to_vertex_key:
                 continue
@@ -177,13 +178,13 @@ def check_graph_routes(graph_data, raw_data, warning_prefix):
 
                 if result is None:
                     all_good = False
-                    print(warning_prefix + "Could not find a route from", from_vertex_key, "to", to_vertex_key, "(with expected task obstacles", route.completed_tasks, "and allowed conditions", str(allowed_condition_vertices) + ") either because there wasn't a route or the graph one was longer than the path (raw path length was", str(expected_length) + ")")
+                    print("  - Could not find a route from", from_vertex_key, "to", to_vertex_key, "(with expected task obstacles", route.completed_tasks, "and allowed conditions", str(allowed_condition_vertices) + ") either because there wasn't a route or the graph one was longer than the path (raw path length was", str(expected_length) + ")")
                     continue
 
                 actual_length, raw_path = result
                 if(expected_length != actual_length):
                     all_good = False
-                    print(warning_prefix + "Routes are not matching from", from_vertex_key, "to", str(to_vertex_key) + ". Raw path length was", expected_length, "and graph length was", str(actual_length) + ". Allowed task obstacles was " + str(route.completed_tasks) + " and allowed condition vertices was " + str(allowed_condition_vertices))
+                    print("  - Routes are not matching from", from_vertex_key, "to", str(to_vertex_key) + ". Raw path length was", expected_length, "and graph length was", str(actual_length) + ". Allowed task obstacles was " + str(route.completed_tasks) + " and allowed condition vertices was " + str(allowed_condition_vertices))
 
     return all_good
 
@@ -361,11 +362,8 @@ def fetch_graph_ids():
     return graph_ids
 
 parser = argparse.ArgumentParser(description='Verify graph data up against raw data')
-parser.add_argument('--warning-prefix', dest='warning_prefix', default=" - ",
-                    help='Prefix printed before warning messages')
 
 args = parser.parse_args()
-warning_prefix = args.warning_prefix
 
 exit_code = 0
 for game_version in fetch_graph_ids():
@@ -377,14 +375,16 @@ for game_version in fetch_graph_ids():
         raw_data = json.load(graph_file)
 
     # Checks all edges up against raw path data.  This is the simple check
-    if check_edge_lengths(graph_data, raw_data, warning_prefix):
+    print(" - Checking edge lenghts")
+    if check_edge_lengths(graph_data, raw_data):
         print(" - Current edge lenghts: OK")
     else:
         exit_code = 1
 
     # Checks all possible vertex-connection combinations (via one or more
     # edges) up against raw path data.  This is the more complex check
-    if check_graph_routes(graph_data, raw_data, warning_prefix):
+    print(" - Checking for missing edges")
+    if check_graph_routes(graph_data, raw_data):
         print(" - Missing edges check: OK")
     else:
         exit_code = 1
