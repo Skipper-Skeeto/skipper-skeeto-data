@@ -495,6 +495,7 @@
       "description": "Ant castle",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "well_top"
       ]
     },
@@ -502,6 +503,7 @@
       "description": "Bat cave",
       "task_obstacle": "light_up_cave",
       "connected_scenes": [
+		"home",
         "bat_entry"
       ]
     },
@@ -509,6 +511,7 @@
       "description": "Bat entry",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "path_bat",
         "bat_cave"
       ]
@@ -517,6 +520,7 @@
       "description": "Bee home",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "fly",
         "duck",
         "ladder",
@@ -527,6 +531,7 @@
       "description": "Bench",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "trashbin",
         "path_bee",
         "fly"
@@ -536,6 +541,7 @@
       "description": "Birds house",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "tree_bottom"
       ]
     },
@@ -543,6 +549,7 @@
       "description": "Bridge",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "mushrooms",
         "path_elfs",
         "lake_bottom"
@@ -552,6 +559,7 @@
       "description": "Cat corner",
       "task_obstacle": "cat",
       "connected_scenes": [
+		"home",
         "trashbin",
         "outside_shed"
       ]
@@ -560,6 +568,7 @@
       "description": "Duck",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "bee",
         "path_bat"
       ]
@@ -568,6 +577,7 @@
       "description": "Elf house",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "path_elfs"
       ]
     },
@@ -575,6 +585,7 @@
       "description": "Flower bush",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "fox"
       ]
     },
@@ -592,6 +603,7 @@
       "description": "Fox bush",
       "task_obstacle": "fox",
       "connected_scenes": [
+		"home",
         "flower_bush",
         "playground_sandbox"
       ]
@@ -600,6 +612,7 @@
       "description": "Frog",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "owl",
         "path_puddle"
       ]
@@ -615,6 +628,7 @@
       "description": "Ladder",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "outside_home",
         "secret_hideout",
         "mushrooms",
@@ -625,6 +639,7 @@
       "description": "Lake bottom",
       "task_obstacle": "dive",
       "connected_scenes": [
+		"home",
         "bridge"
       ]
     },
@@ -632,6 +647,7 @@
       "description": "Mushroom houses",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "playground_horse",
         "bridge",
         "owl",
@@ -651,6 +667,7 @@
       "description": "Outside shed",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "shed",
         "playground_sandbox",
         "rat",
@@ -661,6 +678,7 @@
       "description": "Owl house",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "frog",
         "path_rose_bush",
         "mushrooms"
@@ -670,6 +688,7 @@
       "description": "Path bat",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "duck",
         "bat_entry",
         "path_elfs",
@@ -680,6 +699,7 @@
       "description": "Path bee",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "bench",
         "snail",
         "bee",
@@ -690,6 +710,7 @@
       "description": "Path elf house",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "bridge",
         "elfs",
         "snake",
@@ -700,6 +721,7 @@
       "description": "Path puddle",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "path_rose_bush",
         "snake",
         "squirrel",
@@ -710,6 +732,7 @@
       "description": "Path rose bush",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "rat",
         "path_puddle",
         "rabbit",
@@ -720,6 +743,7 @@
       "description": "Playground horse",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "playground_sandbox",
         "mushrooms"
       ]
@@ -728,6 +752,7 @@
       "description": "Playground sandbox",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "outside_shed",
         "playground_horse",
         "fox"
@@ -737,6 +762,7 @@
       "description": "Rabbit house",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "wall",
         "squirrel",
         "path_rose_bush"
@@ -746,6 +772,7 @@
       "description": "Rat corner",
       "task_obstacle": "rat",
       "connected_scenes": [
+		"home",
         "well_top",
         "path_rose_bush",
         "wall",
@@ -756,6 +783,7 @@
       "description": "Rocket",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "fly",
         "trashbin"
       ]
@@ -764,6 +792,7 @@
       "description": "Secret hideout",
       "task_obstacle": "ladder",
       "connected_scenes": [
+		"home",
         "ladder"
       ]
     },
@@ -771,6 +800,7 @@
       "description": "Shed",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "outside_shed"
       ]
     },
@@ -778,6 +808,7 @@
       "description": "Snail corner",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "path_bee",
         "trunk_bottom",
         "path_bat"
@@ -787,6 +818,7 @@
       "description": "Snake corner",
       "task_obstacle": "snake",
       "connected_scenes": [
+		"home",
         "path_puddle",
         "statue_bottom",
         "path_elfs"
@@ -796,6 +828,7 @@
       "description": "Squirrel house",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "rabbit",
         "path_puddle"
       ]
@@ -804,6 +837,7 @@
       "description": "Statue bottom",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "statue_head",
         "snake"
       ]
@@ -812,6 +846,7 @@
       "description": "Statue head",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "statue_bottom"
       ]
     },
@@ -819,6 +854,7 @@
       "description": "Trashbin",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "cat",
         "bench",
         "rocket"
@@ -828,6 +864,7 @@
       "description": "Tree bottom",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "path_bee",
         "birds_house"
       ]
@@ -836,6 +873,7 @@
       "description": "Tree trunk bottom",
       "task_obstacle": "witch",
       "connected_scenes": [
+		"home",
         "snail",
         "trunk_top"
       ]
@@ -844,6 +882,7 @@
       "description": "Tree trunk top",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "trunk_bottom"
       ]
     },
@@ -851,6 +890,7 @@
       "description": "Wall",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "rat"
       ]
     },
@@ -858,6 +898,7 @@
       "description": "Well top",
       "task_obstacle": null,
       "connected_scenes": [
+		"home",
         "ant_castle",
         "rat"
       ]

@@ -450,10 +450,38 @@
       ]
     },
     {
+      "from": "ant_queen",
+      "to": "start",
+      "length": 3,
+      "conditions": []
+    },
+    {
+      "from": "ant_queen",
+      "to": "fly",
+      "length": 3,
+      "conditions": [
+        "well_top"
+      ]
+    },
+    {
       "from": "bat",
       "to": "ludo_dice",
       "length": 1,
       "conditions": []
+    },
+    {
+      "from": "bat",
+      "to": "start",
+      "length": 3,
+      "conditions": []
+    },
+    {
+      "from": "bat",
+      "to": "fly",
+      "length": 3,
+      "conditions": [
+        "well_top"
+      ]
     },
     {
       "from": "bird_nest_deliver",
@@ -474,6 +502,20 @@
       "to": "can",
       "length": 2,
       "conditions": []
+    },
+    {
+      "from": "bird_nest_talk",
+      "to": "start",
+      "length": 3,
+      "conditions": []
+    },
+    {
+      "from": "bird_nest_talk",
+      "to": "fly",
+      "length": 3,
+      "conditions": [
+        "well_top"
+      ]
     },
     {
       "from": "bridge",
@@ -514,6 +556,14 @@
       "to": "start",
       "length": 2,
       "conditions": []
+    },
+    {
+      "from": "bridge",
+      "to": "fly",
+      "length": 3,
+      "conditions": [
+        "well_top"
+      ]
     },
     {
       "from": "broom",
@@ -601,6 +651,20 @@
       "length": 2,
       "conditions": [
         "playground_horse"
+      ]
+    },
+    {
+      "from": "bucket",
+      "to": "start",
+      "length": 3,
+      "conditions": []
+    },
+    {
+      "from": "bucket",
+      "to": "fly",
+      "length": 3,
+      "conditions": [
+        "well_top"
       ]
     },
     {
@@ -720,6 +784,12 @@
       ]
     },
     {
+      "from": "cat",
+      "to": "start",
+      "length": 3,
+      "conditions": []
+    },
+    {
       "from": "diaper",
       "to": "bucket",
       "length": 1,
@@ -745,6 +815,20 @@
       "length": 1,
       "conditions": [
         "duck"
+      ]
+    },
+    {
+      "from": "diaper",
+      "to": "start",
+      "length": 3,
+      "conditions": []
+    },
+    {
+      "from": "diaper",
+      "to": "fly",
+      "length": 3,
+      "conditions": [
+        "well_top"
       ]
     },
     {
@@ -871,7 +955,23 @@
       "from": "fox_flowers",
       "to": "playground_sandbox",
       "length": 2,
+      "conditions": [
+        "trumpet"
+	  ]
+    },
+    {
+      "from": "fox_flowers",
+      "to": "start",
+      "length": 3,
       "conditions": []
+    },
+    {
+      "from": "fox_flowers",
+      "to": "fly",
+      "length": 3,
+      "conditions": [
+        "well_top"
+      ]
     },
     {
       "from": "frog",
@@ -884,6 +984,14 @@
       "to": "radio",
       "length": 1,
       "conditions": []
+    },
+    {
+      "from": "frog",
+      "to": "fly",
+      "length": 3,
+      "conditions": [
+        "well_top"
+      ]
     },
     {
       "from": "glasses",
@@ -914,6 +1022,20 @@
       ]
     },
     {
+      "from": "glasses",
+      "to": "start",
+      "length": 3,
+      "conditions": []
+    },
+    {
+      "from": "glasses",
+      "to": "fly",
+      "length": 3,
+      "conditions": [
+        "well_top"
+      ]
+    },
+    {
       "from": "helmet",
       "to": "diaper",
       "length": 1,
@@ -931,6 +1053,20 @@
       "length": 0,
       "conditions": [
         "playground_sandbox"
+      ]
+    },
+    {
+      "from": "helmet",
+      "to": "start",
+      "length": 3,
+      "conditions": []
+    },
+    {
+      "from": "helmet",
+      "to": "fly",
+      "length": 3,
+      "conditions": [
+        "well_top"
       ]
     },
     {
@@ -1032,6 +1168,14 @@
       "conditions": []
     },
     {
+      "from": "lake_bottom",
+      "to": "fly",
+      "length": 3,
+      "conditions": [
+        "well_top"
+      ]
+    },
+    {
       "from": "ludo_dice",
       "to": "bat",
       "length": 1,
@@ -1044,6 +1188,20 @@
       "to": "broom",
       "length": 1,
       "conditions": []
+    },
+    {
+      "from": "ludo_dice",
+      "to": "start",
+      "length": 3,
+      "conditions": []
+    },
+    {
+      "from": "ludo_dice",
+      "to": "fly",
+      "length": 3,
+      "conditions": [
+        "well_top"
+      ]
     },
     {
       "from": "mirror",
@@ -1091,6 +1249,20 @@
       ]
     },
     {
+      "from": "mirror",
+      "to": "start",
+      "length": 3,
+      "conditions": []
+    },
+    {
+      "from": "mirror",
+      "to": "fly",
+      "length": 3,
+      "conditions": [
+        "well_top"
+      ]
+    },
+    {
       "from": "monkey",
       "to": "bucket",
       "length": 2,
@@ -1115,6 +1287,20 @@
       ]
     },
     {
+      "from": "monkey",
+      "to": "start",
+      "length": 3,
+      "conditions": []
+    },
+    {
+      "from": "monkey",
+      "to": "fly",
+      "length": 3,
+      "conditions": [
+        "well_top"
+      ]
+    },
+    {
       "from": "pants",
       "to": "broom",
       "length": 1,
@@ -1134,6 +1320,20 @@
         "shed_closets",
         "statue_bottom",
         "lake_bottom"
+      ]
+    },
+    {
+      "from": "pants",
+      "to": "start",
+      "length": 3,
+      "conditions": []
+    },
+    {
+      "from": "pants",
+      "to": "fly",
+      "length": 3,
+      "conditions": [
+        "well_top"
       ]
     },
     {
@@ -1185,6 +1385,14 @@
       "conditions": []
     },
     {
+      "from": "playground_horse",
+      "to": "fly",
+      "length": 3,
+      "conditions": [
+        "well_top"
+      ]
+    },
+    {
       "from": "playground_sandbox",
       "to": "fox_flowers",
       "length": 2,
@@ -1203,6 +1411,14 @@
       "to": "playground_horse",
       "length": 1,
       "conditions": []
+    },
+    {
+      "from": "playground_sandbox",
+      "to": "fly",
+      "length": 3,
+      "conditions": [
+        "well_top"
+      ]
     },
     {
       "from": "purple_stick",
@@ -1265,6 +1481,14 @@
       "to": "trumpet",
       "length": 1,
       "conditions": []
+    },
+    {
+      "from": "purple_stick",
+      "to": "fly",
+      "length": 3,
+      "conditions": [
+        "well_top"
+      ]
     },
     {
       "from": "radio",
@@ -1332,6 +1556,14 @@
       "conditions": []
     },
     {
+      "from": "radio",
+      "to": "fly",
+      "length": 3,
+      "conditions": [
+        "well_top"
+      ]
+    },
+    {
       "from": "rocket_mouse",
       "to": "can",
       "length": 3,
@@ -1368,6 +1600,12 @@
         "can",
         "diaper"
       ]
+    },
+    {
+      "from": "rocket_mouse",
+      "to": "start",
+      "length": 4,
+      "conditions": []
     },
     {
       "from": "rocket_stick",
@@ -1419,6 +1657,12 @@
       ]
     },
     {
+      "from": "rocket_stick",
+      "to": "start",
+      "length": 3,
+      "conditions": []
+    },
+    {
       "from": "secret_hideout",
       "to": "start",
       "length": 1,
@@ -1445,6 +1689,20 @@
       ]
     },
     {
+      "from": "shed_flashlight",
+      "to": "start",
+      "length": 3,
+      "conditions": []
+    },
+    {
+      "from": "shed_flashlight",
+      "to": "fly",
+      "length": 3,
+      "conditions": [
+        "well_top"
+      ]
+    },
+    {
       "from": "snake",
       "to": "diaper",
       "length": 1,
@@ -1461,6 +1719,20 @@
       "to": "statue_bottom",
       "length": 1,
       "conditions": []
+    },
+    {
+      "from": "snake",
+      "to": "start",
+      "length": 3,
+      "conditions": []
+    },
+    {
+      "from": "snake",
+      "to": "fly",
+      "length": 3,
+      "conditions": [
+        "well_top"
+      ]
     },
     {
       "from": "start",
@@ -1570,10 +1842,38 @@
       ]
     },
     {
+      "from": "statue_bottom",
+      "to": "start",
+      "length": 3,
+      "conditions": []
+    },
+    {
+      "from": "statue_bottom",
+      "to": "fly",
+      "length": 3,
+      "conditions": [
+        "well_top"
+      ]
+    },
+    {
       "from": "statue_top",
       "to": "statue_bottom",
       "length": 1,
       "conditions": []
+    },
+    {
+      "from": "statue_top",
+      "to": "start",
+      "length": 3,
+      "conditions": []
+    },
+    {
+      "from": "statue_top",
+      "to": "fly",
+      "length": 3,
+      "conditions": [
+        "well_top"
+      ]
     },
     {
       "from": "trash",
@@ -1605,10 +1905,33 @@
       "conditions": []
     },
     {
+      "from": "trash",
+      "to": "start",
+      "length": 3,
+      "conditions": []
+    },
+    {
       "from": "tree_trunk_chest",
       "to": "pants",
       "length": 2,
+      "conditions": [
+        "shed_closets",
+        "statue_bottom"
+	  ]
+    },
+    {
+      "from": "tree_trunk_chest",
+      "to": "start",
+      "length": 3,
       "conditions": []
+    },
+    {
+      "from": "tree_trunk_chest",
+      "to": "fly",
+      "length": 3,
+      "conditions": [
+        "well_top"
+      ]
     },
     {
       "from": "trumpet",
@@ -1625,6 +1948,20 @@
       "conditions": []
     },
     {
+      "from": "trumpet",
+      "to": "start",
+      "length": 3,
+      "conditions": []
+    },
+    {
+      "from": "trumpet",
+      "to": "fly",
+      "length": 3,
+      "conditions": [
+        "well_top"
+      ]
+    },
+    {
       "from": "well_top",
       "to": "ant_queen",
       "length": 1,
@@ -1636,20 +1973,39 @@
       "from": "well_top",
       "to": "bucket",
       "length": 2,
-      "conditions": []
+      "conditions": [
+        "playground_horse"
+      ]
     },
     {
       "from": "well_top",
       "to": "mirror",
       "length": 2,
-      "conditions": []
+      "conditions": [
+        "playground_horse"
+      ]
     },
     {
       "from": "well_top",
       "to": "monkey",
       "length": 2,
       "conditions": [
+        "playground_horse",
         "radio"
+      ]
+    },
+    {
+      "from": "well_top",
+      "to": "start",
+      "length": 3,
+      "conditions": []
+    },
+    {
+      "from": "well_top",
+      "to": "fly",
+      "length": 3,
+      "conditions": [
+        "well_top"
       ]
     }
   ]
